@@ -1,0 +1,193 @@
+/****************************************************************primary elements*/
+
+body {
+	font-size:			.7em;
+	font-family:		Verdana, Geneva, Arial, sans-serif;
+	background-color:	#213849;
+	padding:			0px;
+	margin:				0px;
+	margin-bottom:		-10px;
+	line-height:		1.4;
+}
+
+a {
+	text-decoration:none;
+  font-weight:bold;
+  color:#213849;
+}
+
+a:hover {
+	color: #657b8c;
+}
+
+#wrap {
+	max-width:			1200px;
+	height:				100%;
+	margin:				0 auto;
+	padding:			0px;
+	background:			#eeeeee;
+	border:				3px hidden #000000;
+}
+
+#header {
+	position:			relative;
+	top:				0px;
+	padding:			0px;
+	margin:				0px;
+	margin-bottom:		10px;
+	color:				#ffffff;
+	height:				260px;
+	background:			#243c55 url(images/main_head.jpg) top left no-repeat;
+}
+
+	#weddings #header {
+		position:			relative;
+		top:				0px;
+		padding:			0px;
+		margin:				0px;
+		margin-bottom:		10px;
+		color:				#ffffff;
+		height:				260px;
+		background:			#243c55 url(images/wedding_head2.jpg) top right no-repeat;
+	}
+
+	#seniors #header {
+		position:			relative;
+		top:				0px;
+		padding:			0px;
+		margin:				0px;
+		margin-bottom:		10px;
+		color:				#ffffff;
+		height:				260px;
+		background:			#243c55 url(images/seniors_head.jpg) top left no-repeat;
+	}
+
+	#pets #header {
+		position:			relative;
+		top:				0px;
+		padding:			0px;
+		margin:				0px;
+		margin-bottom:		10px;
+		color:				#ffffff;
+		height:				260px;
+		background:			#243c55 url(images/pet_head.jpg) top left no-repeat;
+	}
+
+	#children #header {
+		position:			relative;
+		top:				0px;
+		padding:			0px;
+		margin:				0px;
+		margin-bottom:		10px;
+		color:				#ffffff;
+		height:				260px;
+		background:			#243c55 url(images/children_head.jpg) top left no-repeat;
+	}
+
+	#header h1{
+		display:			none;
+		margin:				0px;	/*o'w first child element with content, margin will extend past parents*/
+		padding-right:		10px;
+		font-family:		"Monotype Corsiva", "Aramis", cursive, "Times New Roman", serif;
+		font-size:			3em;
+		padding:			10px;
+	}
+
+#contact {
+	position:			absolute;
+	bottom:				0px;
+	left:				0px;
+	width:				100%;
+	background-color:	#111111;
+	margin:				0px;
+	padding:			0px;
+	opacity:			0.8;
+}
+
+	#contact a{
+		text-decoration:	none;
+		color:				#ffffff;
+	}
+
+	#contact li {
+		list-style-type:	none;
+		display:			inline;
+		font-size:			1.2em;
+		line-height:		2em;
+		padding-left:		1em;
+		padding-right:		1em;
+	}
+
+#location, #phone {
+	border-right:		thin dotted #777777;
+}
+
+#navcontainer {
+	width:				150px;
+	float:				left;
+	background-color:	#213849;
+	font-weight:		bold;
+	font-size: small;
+	opacity:			.8;
+}
+
+	#navcontainer ul {
+		list-style-type:	none;
+		padding-left:		15px;
+	}
+
+		#navcontainer ul ul {
+			background-color:	#213849;
+			margin:				0px;
+			padding-left:		10px;
+		}
+
+	#navcontainer ul a:link, #navcontainer ul a:visited {
+		text-decoration:	none;
+		color:				silver;
+	}
+
+	#navcontainer ul a:hover {
+		color:				white;
+	}
+
+#content {
+	margin-left:		160px;
+}
+
+	#homepage #content {
+		margin-left:		160px;
+		margin-right:		582px;
+	}
+
+#signature {
+	margin-left: 300px;
+	font-style:italic;
+}
+
+#gallery {
+	float:				right;
+	text-align:			right;
+	width:				500px;
+	padding:			20px;
+	margin-bottom:		20px;
+	border-left:		thin dotted #39397d;
+}
+
+	#homepage #gallery {
+		width:				522px;
+		height:				506px;
+		margin:				0px;
+		padding:			20px;
+		background:			url(images/horizontal522.png) top center no-repeat;
+	}
+
+#footer {
+	text-align:			center;
+	font-size:			x-small;
+	color:				#ffffff;
+	background:			#222222;
+	margin-top:			10px;
+	margin-bottom:		0px;
+	clear:				both;
+}
