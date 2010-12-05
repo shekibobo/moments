@@ -8,9 +8,9 @@
   <%= link_to "View All Galleries", galleries_path %>
 </p>
 
-<div class="photo_grid">
+<div class="grid">
   <% for photo in @gallery.photos %>
-  <div class="image">
+  <div class="cell">
     <%= link_to (image_tag photo.image.url(:small)), [@gallery, photo] %><br />
 
     <%=h photo.name %> - Rating: <%=h photo.rating %><br />

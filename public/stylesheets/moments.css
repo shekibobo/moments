@@ -92,6 +92,12 @@ a:hover {
   text-align: center;
 }
 
+#admin {
+	background: #ff6666;
+	color: #ffffff;
+	text-align: center;
+}
+
 ul#nav_list li {
   list-style-type: none;
   display: inline;
