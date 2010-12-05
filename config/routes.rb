@@ -1,5 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
 
+  # map.resources :photos # nested in galleries
+  map.resources :galleries, :has_many => [ :photos ]
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
 

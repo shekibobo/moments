@@ -1,0 +1,9 @@
+one:
+  name: MyString
+  user_id: 1
+  shoot_date: 2010-12-04
+
+two:
+  name: MyString
+  user_id: 1
+  shoot_date: 2010-12-04

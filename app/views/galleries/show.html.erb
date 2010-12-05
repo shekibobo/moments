@@ -1,0 +1,32 @@
+<% title "Gallery" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @gallery.name %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%=h @gallery.user_id %>
+</p>
+<p>
+  <strong>Shoot Date:</strong>
+  <%=h @gallery.shoot_date %>
+</p>
+
+<div class="photo_grid">
+  <% for photo in @gallery.photos %>
+  <div class="image">
+    <%=h photo.name %> - Rating: <%=h photo.rating %> |
+    <%= link_to "Show", [@gallery, photo] %> |
+      <%= link_to "Edit", edit_gallery_photo_path(@gallery, photo) %> |
+      <%= link_to "Destroy", [@gallery, photo], :confirm => 'Are you sure?', :method => :delete %>
+  </div>
+  <% end %>
+</div>
+<p><%= link_to "New Photo", new_gallery_photo_path(@gallery) %></p>
+
+<p>
+  <%= link_to "Edit", edit_gallery_path(@gallery) %> |
+  <%= link_to "Destroy", @gallery, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", galleries_path %>
+</p>

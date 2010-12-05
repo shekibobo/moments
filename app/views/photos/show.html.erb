@@ -1,0 +1,20 @@
+<% title "Photo" %>
+
+<p>
+  <strong>Gallery:</strong>
+  <%=h @photo.gallery_id %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%=h @photo.name %>
+</p>
+<p>
+  <strong>Rating:</strong>
+  <%=h @photo.rating %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_gallery_photo_path(@gallery, @photo) %> |
+  <%= link_to "Destroy", [@gallery, @photo], :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", gallery_path(@gallery) %>
+</p>
