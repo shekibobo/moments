@@ -16,6 +16,10 @@
 <div class="photo_grid">
   <% for photo in @gallery.photos %>
   <div class="image">
+    <% if photo.image? %>
+      <%= image_tag photo.image.url %><br />
+      <%= link_to photo.image.url, photo.image.url %>
+    <% end %>
     <%=h photo.name %> - Rating: <%=h photo.rating %> |
     <%= link_to "Show", [@gallery, photo] %> |
       <%= link_to "Edit", edit_gallery_photo_path(@gallery, photo) %> |

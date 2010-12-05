@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101205041003) do
+ActiveRecord::Schema.define(:version => 20101205173411) do
 
   create_table "collections", :force => true do |t|
     t.string   "name"
@@ -39,9 +39,13 @@ ActiveRecord::Schema.define(:version => 20101205041003) do
   create_table "photos", :force => true do |t|
     t.integer  "gallery_id"
     t.string   "name"
-    t.integer  "rating",     :limit => 10, :precision => 10, :scale => 0
+    t.integer  "rating",             :limit => 10, :precision => 10, :scale => 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end

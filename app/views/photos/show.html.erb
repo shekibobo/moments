@@ -1,8 +1,13 @@
 <% title "Photo" %>
-
+<p>
+<% if @photo.image? %>
+  <%= image_tag @photo.image.url %><br />
+  <%= link_to @photo.image.url, @photo.image.url %>
+<% end %>
+</p>
 <p>
   <strong>Gallery:</strong>
-  <%=h @photo.gallery_id %>
+  <%=h @gallery.name %>
 </p>
 <p>
   <strong>Name:</strong>
