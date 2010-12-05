@@ -11,14 +11,6 @@
 
 ActiveRecord::Schema.define(:version => 20101205173411) do
 
-  create_table "collections", :force => true do |t|
-    t.string   "name"
-    t.string   "owner"
-    t.integer  "init_qty"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "galleries", :force => true do |t|
     t.string   "name"
     t.integer  "user_id"
@@ -27,19 +19,10 @@ ActiveRecord::Schema.define(:version => 20101205173411) do
     t.datetime "updated_at"
   end
 
-  create_table "items", :force => true do |t|
-    t.string   "type"
-    t.string   "category"
-    t.string   "caption"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "collection_id"
-  end
-
   create_table "photos", :force => true do |t|
     t.integer  "gallery_id"
     t.string   "name"
-    t.integer  "rating",             :limit => 10, :precision => 10, :scale => 0
+    t.decimal  "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image_file_name"

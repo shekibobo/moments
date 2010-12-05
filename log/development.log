@@ -11970,3 +11970,373 @@ Rendering galleries/index
   [4;35;1mPhoto Load (2.0ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) LIMIT 1[0m
   [4;36;1mPhoto Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
 Completed in 83ms (View: 75, DB: 4) | 200 OK [http://localhost/galleries]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 15:59:41) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 27ms (View: 20, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-05 16:02:07) [GET]
+  Parameters: {"gallery_id"=>"3"}
+  [4;35;1mGallery Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mPhoto Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (4.5ms)
+Completed in 21ms (View: 7, DB: 2) | 200 OK [http://localhost/galleries/3/photos/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-05 16:02:27) [POST]
+  Parameters: {"photo"=>{"name"=>"next row", "image"=>#<File:/tmp/RackMultipart20101205-2909-1gq6pru-0>}, "commit"=>"Save changes", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+[paperclip] identify -format %wx%h '/tmp/stream20101205-2909-wztlzp-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101205-2909-wztlzp-0.jpg[0]' -resize "150x150>" '/tmp/stream20101205-2909-wztlzp-020101205-2909-16hm1w0-0' 2>/dev/null
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mPhoto Create (0.3ms)[0m   [0mINSERT INTO `photos` (`name`, `rating`, `created_at`, `image_file_name`, `image_file_size`, `updated_at`, `image_content_type`, `image_updated_at`, `gallery_id`) VALUES('next row', NULL, '2010-12-05 21:02:27', '6657.jpg', 143720, '2010-12-05 21:02:27', 'image/jpeg', '2010-12-05 21:02:27', 3)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/system/images/11/small/6657.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/system/images/11/original/6657.jpg
+  [4;36;1mSQL (55.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/galleries/3/photos/11
+Completed in 394ms (DB: 57) | 302 Found [http://localhost/galleries/3/photos]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-05 16:02:27) [GET]
+  Parameters: {"id"=>"11", "gallery_id"=>"3"}
+  [4;35;1mGallery Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 11 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 19ms (View: 8, DB: 2) | 200 OK [http://localhost/galleries/3/photos/11]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 16:02:34) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 30ms (View: 23, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-05 16:02:50) [GET]
+  Parameters: {"gallery_id"=>"3"}
+  [4;35;1mGallery Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mPhoto Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (4.6ms)
+Completed in 20ms (View: 7, DB: 2) | 200 OK [http://localhost/galleries/3/photos/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-05 16:02:58) [POST]
+  Parameters: {"photo"=>{"name"=>"another", "image"=>#<File:/tmp/RackMultipart20101205-2909-1n4w44-0>}, "commit"=>"Save changes", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+[paperclip] identify -format %wx%h '/tmp/stream20101205-2909-xgen7e-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101205-2909-xgen7e-0.jpg[0]' -resize "150x150>" '/tmp/stream20101205-2909-xgen7e-020101205-2909-xxtiub-0' 2>/dev/null
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mPhoto Create (0.3ms)[0m   [0mINSERT INTO `photos` (`name`, `rating`, `created_at`, `image_file_name`, `image_file_size`, `updated_at`, `image_content_type`, `image_updated_at`, `gallery_id`) VALUES('another', NULL, '2010-12-05 21:02:59', '01813_twilightatbigsur_2560x1440.jpg', 1661202, '2010-12-05 21:02:59', 'image/jpeg', '2010-12-05 21:02:59', 3)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/system/images/12/small/01813_twilightatbigsur_2560x1440.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/system/images/12/original/01813_twilightatbigsur_2560x1440.jpg
+  [4;36;1mSQL (54.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/galleries/3/photos/12
+Completed in 782ms (DB: 56) | 302 Found [http://localhost/galleries/3/photos]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-05 16:02:59) [GET]
+  Parameters: {"id"=>"12", "gallery_id"=>"3"}
+  [4;35;1mGallery Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 12 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 20ms (View: 8, DB: 2) | 200 OK [http://localhost/galleries/3/photos/12]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 16:03:03) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;36;1mPhoto Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 35ms (View: 27, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-05 16:03:14) [GET]
+  Parameters: {"gallery_id"=>"3"}
+  [4;35;1mGallery Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mPhoto Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (60.5ms)
+Completed in 77ms (View: 63, DB: 2) | 200 OK [http://localhost/galleries/3/photos/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-05 16:03:20) [POST]
+  Parameters: {"photo"=>{"name"=>"bt", "image"=>#<File:/tmp/RackMultipart20101205-2909-jvcrbx-0>}, "commit"=>"Save changes", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+[paperclip] identify -format %wx%h '/tmp/stream20101205-2909-16d9uzc-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101205-2909-16d9uzc-0.jpg[0]' -resize "150x150>" '/tmp/stream20101205-2909-16d9uzc-020101205-2909-5thwt3-0' 2>/dev/null
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mPhoto Create (0.3ms)[0m   [0mINSERT INTO `photos` (`name`, `rating`, `created_at`, `image_file_name`, `image_file_size`, `updated_at`, `image_content_type`, `image_updated_at`, `gallery_id`) VALUES('bt', NULL, '2010-12-05 21:03:20', 'battletoads.jpg', 71392, '2010-12-05 21:03:20', 'image/jpeg', '2010-12-05 21:03:20', 3)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/system/images/13/small/battletoads.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/system/images/13/original/battletoads.jpg
+  [4;36;1mSQL (53.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/galleries/3/photos/13
+Completed in 267ms (DB: 55) | 302 Found [http://localhost/galleries/3/photos]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-05 16:03:20) [GET]
+  Parameters: {"id"=>"13", "gallery_id"=>"3"}
+  [4;35;1mGallery Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mPhoto Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 13 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 20ms (View: 9, DB: 2) | 200 OK [http://localhost/galleries/3/photos/13]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 16:03:23) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 109ms (View: 102, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 16:06:52) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;36;1mPhoto Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 35ms (View: 29, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 16:10:02) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;36;1mPhoto Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 42ms (View: 36, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 16:10:04) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 101ms (View: 30, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 16:10:22) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 34ms (View: 28, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 16:10:45) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;36;1mPhoto Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 35ms (View: 28, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 16:11:50) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;36;1mPhoto Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 36ms (View: 29, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 16:12:21) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 34ms (View: 28, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (83.1ms)[0m   [0mDROP TABLE `collections`[0m
+  [4;36;1mSQL (144.3ms)[0m   [0;1mCREATE TABLE `collections` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `owner` varchar(255), `init_qty` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (54.8ms)[0m   [0;1mDROP TABLE `galleries`[0m
+  [4;35;1mSQL (122.7ms)[0m   [0mCREATE TABLE `galleries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `user_id` int(11), `shoot_date` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (55.1ms)[0m   [0mDROP TABLE `items`[0m
+  [4;36;1mSQL (122.8ms)[0m   [0;1mCREATE TABLE `items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `type` varchar(255), `category` varchar(255), `caption` varchar(255), `created_at` datetime, `updated_at` datetime, `collection_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (55.0ms)[0m   [0;1mDROP TABLE `photos`[0m
+  [4;35;1mSQL (122.8ms)[0m   [0mCREATE TABLE `photos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `gallery_id` int(11), `name` varchar(255), `rating` integer, `created_at` datetime, `updated_at` datetime, `image_file_name` varchar(255), `image_content_type` varchar(255), `image_file_size` int(11), `image_updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (19.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (134.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (93.4ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateGalleries (20101205040201)
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE TABLE "galleries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "user_id" integer, "shoot_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101205040201')[0m
+Migrating to CreatePhotos (20101205041003)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "gallery_id" integer, "name" varchar(255), "rating" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101205041003')[0m
+Migrating to AddImageToPhotos (20101205173411)
+  [4;35;1mSQL (0.8ms)[0m   [0mALTER TABLE "photos" ADD "image_file_name" varchar(255)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "photos" ADD "image_content_type" varchar(255)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "photos" ADD "image_file_size" integer[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "photos" ADD "image_updated_at" datetime[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101205173411')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("galleries")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("photos")[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 16:23:18) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 3) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Gallery with ID=3):
+  app/controllers/galleries_controller.rb:7:in `show'
+
+Rendered rescues/_trace (40.1ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-05 16:23:22) [GET]
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/galleries/]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-05 16:23:24) [GET]
+  [4;36;1mGallery Load (0.4ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+Completed in 8ms (View: 2, DB: 0) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#new (for 127.0.0.1 at 2010-12-05 16:23:25) [GET]
+Rendering template within layouts/application
+Rendering galleries/new
+Rendered galleries/_form (23.6ms)
+Completed in 113ms (View: 108, DB: 0) | 200 OK [http://localhost/galleries/new]
