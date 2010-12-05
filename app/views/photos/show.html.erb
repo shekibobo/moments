@@ -1,4 +1,4 @@
-<% title "Photo" %>
+<% title "Photo: #{@photo.name}" %>
 <p>
 <% if @photo.image? %>
   <%= image_tag @photo.image.url %><br />

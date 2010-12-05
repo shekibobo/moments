@@ -4,7 +4,7 @@ class Photo < ActiveRecord::Base
   belongs_to :gallery
   validates_associated :gallery
 
-  has_attached_file :image
+  has_attached_file :image, :styles => { :small => "150x150>" }
   validates_attachment_presence :image
 
 end

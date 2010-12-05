@@ -1,39 +1,23 @@
-<% title "Gallery" %>
+<% title "User #{@gallery.user_id}'s Gallery: #{@gallery.name.capitalize} (#{@gallery.shoot_date})" %>
 
-<p>
-  <strong>Name:</strong>
-  <%=h @gallery.name %>
-</p>
-<p>
-  <strong>User:</strong>
-  <%=h @gallery.user_id %>
-</p>
-<p>
-  <strong>Shoot Date:</strong>
-  <%=h @gallery.shoot_date %>
+<p><%= link_to "New Photo", new_gallery_photo_path(@gallery) %> |
+  <%= link_to "Edit Gallery", edit_gallery_path(@gallery) %> |
+  <%= link_to "Destroy Gallery", @gallery,
+    :confirm => 'Are you sure? This will destroy all images in this gallery.',
+    :method => :delete %> |
+  <%= link_to "View All Galleries", galleries_path %>
 </p>
 
 <div class="photo_grid">
   <% for photo in @gallery.photos %>
   <div class="image">
-    <% if photo.image? %>
-      <%= image_tag photo.image.url %><br />
-      <%= link_to photo.image.url, photo.image.url %>
-    <% end %>
-    <%=h photo.name %> - Rating: <%=h photo.rating %> |
-    <%= link_to "Show", [@gallery, photo] %> |
+    <%= link_to (image_tag photo.image.url(:small)), [@gallery, photo] %><br />
+
+    <%=h photo.name %> - Rating: <%=h photo.rating %><br />
       <%= link_to "Edit", edit_gallery_photo_path(@gallery, photo) %> |
       <%= link_to "Destroy", [@gallery, photo], :confirm => 'Are you sure?',
         :method => :delete %>
   </div>
   <% end %>
 </div>
-<p><%= link_to "New Photo", new_gallery_photo_path(@gallery) %></p>
 
-<p>
-  <%= link_to "Edit", edit_gallery_path(@gallery) %> |
-  <%= link_to "Destroy", @gallery,
-    :confirm => 'Are you sure? This will destroy all images in this gallery.',
-    :method => :delete %> |
-  <%= link_to "View All", galleries_path %>
-</p>
