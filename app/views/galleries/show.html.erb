@@ -19,7 +19,8 @@
     <%=h photo.name %> - Rating: <%=h photo.rating %> |
     <%= link_to "Show", [@gallery, photo] %> |
       <%= link_to "Edit", edit_gallery_photo_path(@gallery, photo) %> |
-      <%= link_to "Destroy", [@gallery, photo], :confirm => 'Are you sure?', :method => :delete %>
+      <%= link_to "Destroy", [@gallery, photo], :confirm => 'Are you sure?',
+        :method => :delete %>
   </div>
   <% end %>
 </div>
@@ -27,6 +28,8 @@
 
 <p>
   <%= link_to "Edit", edit_gallery_path(@gallery) %> |
-  <%= link_to "Destroy", @gallery, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "Destroy", @gallery,
+    :confirm => 'Are you sure? This will destroy all images in this gallery.',
+    :method => :delete %> |
   <%= link_to "View All", galleries_path %>
 </p>

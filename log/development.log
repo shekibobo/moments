@@ -8141,3 +8141,1173 @@ Rendering galleries/show
   [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
   [4;35;1mPhoto Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
 Completed in 19ms (View: 12, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-05 00:21:04) [GET]
+  Parameters: {"id"=>"4", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 32ms (View: 16, DB: 2) | 200 OK [http://localhost/galleries/3/photos/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-12-05 00:21:09) [GET]
+  Parameters: {"id"=>"4", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/edit
+Rendered photos/_form (6.0ms)
+
+ActionView::TemplateError (undefined method `photo_path' for #<ActionView::Base:0x7f18a998b408>) on line #6 of app/views/photos/edit.html.erb:
+3: <%= render :partial => 'form' %>
+4: 
+5: <p>
+6:   <%= link_to "Show", @photo %> |
+7:   <%= link_to "View All", gallery_path(@gallery) %>
+8: </p>
+
+    app/views/photos/edit.html.erb:6
+
+Rendered rescues/_trace (113.1ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-12-05 00:21:39) [GET]
+  Parameters: {"id"=>"4", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/edit
+Rendered photos/_form (5.1ms)
+Completed in 21ms (View: 11, DB: 1) | 200 OK [http://localhost/galleries/3/photos/4/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2010-12-05 00:21:42) [PUT]
+  Parameters: {"photo"=>{"name"=>"Josh"}, "commit"=>"Save changes", "id"=>"4", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+
+NoMethodError (undefined method `photo_url' for #<PhotosController:0x7f18a98d7908>):
+  app/controllers/photos_controller.rb:34:in `update'
+
+Rendered rescues/_trace (33.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2010-12-05 00:22:17) [PUT]
+  Parameters: {"photo"=>{"name"=>"Josh"}, "commit"=>"Save changes", "id"=>"4", "gallery_id"=>"3"}
+  [4;35;1mGallery Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mPhoto Columns (3.3ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/galleries/3/photos/4
+Completed in 31ms (DB: 5) | 302 Found [http://localhost/galleries/3/photos/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-05 00:22:17) [GET]
+  Parameters: {"id"=>"4", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 21ms (View: 9, DB: 2) | 200 OK [http://localhost/galleries/3/photos/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-12-05 00:22:21) [GET]
+  Parameters: {"id"=>"4", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/edit
+Rendered photos/_form (5.1ms)
+Completed in 19ms (View: 8, DB: 2) | 200 OK [http://localhost/galleries/3/photos/4/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#update (for 127.0.0.1 at 2010-12-05 00:22:22) [PUT]
+  Parameters: {"photo"=>{"name"=>"Josh"}, "commit"=>"Save changes", "id"=>"4", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/galleries/3/photos/4
+Completed in 15ms (DB: 2) | 302 Found [http://localhost/galleries/3/photos/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-05 00:22:22) [GET]
+  Parameters: {"id"=>"4", "gallery_id"=>"3"}
+  [4;35;1mGallery Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 16ms (View: 5, DB: 2) | 200 OK [http://localhost/galleries/3/photos/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-12-05 00:22:23) [GET]
+  Parameters: {"id"=>"4", "gallery_id"=>"3"}
+  [4;35;1mGallery Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/edit
+Rendered photos/_form (5.1ms)
+Completed in 19ms (View: 8, DB: 2) | 200 OK [http://localhost/galleries/3/photos/4/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-05 00:22:24) [GET]
+  Parameters: {"id"=>"4", "gallery_id"=>"3"}
+  [4;35;1mGallery Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 16ms (View: 5, DB: 2) | 200 OK [http://localhost/galleries/3/photos/4]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-12-05 00:22:26) [GET]
+  Parameters: {"id"=>"4", "gallery_id"=>"3"}
+  [4;35;1mGallery Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/edit
+Rendered photos/_form (5.3ms)
+Completed in 19ms (View: 8, DB: 2) | 200 OK [http://localhost/galleries/3/photos/4/edit]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:22:27) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 26ms (View: 19, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#edit (for 127.0.0.1 at 2010-12-05 00:22:30) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/edit
+Rendered galleries/_form (9.8ms)
+Completed in 24ms (View: 18, DB: 1) | 200 OK [http://localhost/galleries/3/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:22:33) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;36;1mPhoto Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 19ms (View: 12, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#edit (for 127.0.0.1 at 2010-12-05 00:22:34) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/edit
+Rendered galleries/_form (69.9ms)
+Completed in 79ms (View: 73, DB: 1) | 200 OK [http://localhost/galleries/3/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-05 00:22:36) [GET]
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM `galleries` [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/galleries]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#new (for 127.0.0.1 at 2010-12-05 00:22:37) [GET]
+  [4;35;1mGallery Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+Rendering template within layouts/application
+Rendering galleries/new
+Rendered galleries/_form (11.2ms)
+Completed in 22ms (View: 17, DB: 1) | 200 OK [http://localhost/galleries/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-05 00:22:42) [GET]
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mGallery Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+Completed in 12ms (View: 6, DB: 1) | 200 OK [http://localhost/galleries]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:22:55) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 20ms (View: 13, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:23:46) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 36ms (View: 27, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:28:49) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 18ms (View: 12, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:30:55) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+) on line #24 of app/views/galleries/show.html.erb:
+21:       <%= link_to "Edit", edit_gallery_photo_path(@gallery, photo) %> |
+22:       <%= link_to "Destroy", [@gallery, photo], :confirm => 'Are you sure?',
+23:         :method => :delete %>
+24:       <%= link_to "Like", :action => photo.like %>
+25:   </div>
+26:   <% end %>
+27: </div>
+
+    app/models/photo.rb:8:in `like'
+    app/views/galleries/show.html.erb:24
+    app/views/galleries/show.html.erb:17
+
+Rendered rescues/_trace (111.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:31:38) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+) on line #24 of app/views/galleries/show.html.erb:
+21:       <%= link_to "Edit", edit_gallery_photo_path(@gallery, photo) %> |
+22:       <%= link_to "Destroy", [@gallery, photo], :confirm => 'Are you sure?',
+23:         :method => :delete %>
+24:       <%= link_to "Like", :method => photo.like %>
+25:   </div>
+26:   <% end %>
+27: </div>
+
+    app/models/photo.rb:8:in `like'
+    app/views/galleries/show.html.erb:24
+    app/views/galleries/show.html.erb:17
+
+Rendered rescues/_trace (114.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:31:59) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+) on line #24 of app/views/galleries/show.html.erb:
+21:       <%= link_to "Edit", edit_gallery_photo_path(@gallery, photo) %> |
+22:       <%= link_to "Destroy", [@gallery, photo], :confirm => 'Are you sure?',
+23:         :method => :delete %>
+24:       <%= link_to "Like", photo.like %>
+25:   </div>
+26:   <% end %>
+27: </div>
+
+    app/models/photo.rb:8:in `like'
+    app/views/galleries/show.html.erb:24
+    app/views/galleries/show.html.erb:17
+
+Rendered rescues/_trace (42.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:32:00) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.+) on line #24 of app/views/galleries/show.html.erb:
+21:       <%= link_to "Edit", edit_gallery_photo_path(@gallery, photo) %> |
+22:       <%= link_to "Destroy", [@gallery, photo], :confirm => 'Are you sure?',
+23:         :method => :delete %>
+24:       <%= link_to "Like", photo.like %>
+25:   </div>
+26:   <% end %>
+27: </div>
+
+    app/models/photo.rb:8:in `like'
+    app/views/galleries/show.html.erb:24
+    app/views/galleries/show.html.erb:17
+
+Rendered rescues/_trace (43.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:32:17) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+
+ActionView::TemplateError (undefined method `photo_path' for #<ActionView::Base:0x7f18a9798560>) on line #24 of app/views/galleries/show.html.erb:
+21:       <%= link_to "Edit", edit_gallery_photo_path(@gallery, photo) %> |
+22:       <%= link_to "Destroy", [@gallery, photo], :confirm => 'Are you sure?',
+23:         :method => :delete %>
+24:       <%= link_to "Like", photo %>
+25:   </div>
+26:   <% end %>
+27: </div>
+
+    app/views/galleries/show.html.erb:24
+    app/views/galleries/show.html.erb:17
+
+Rendered rescues/_trace (117.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:33:42) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+
+ActionView::TemplateError (undefined method `photo_path' for #<ActionView::Base:0x7f18a99290f0>) on line #24 of app/views/galleries/show.html.erb:
+21:       <%= link_to "Edit", edit_gallery_photo_path(@gallery, photo) %> |
+22:       <%= link_to "Destroy", [@gallery, photo], :confirm => 'Are you sure?',
+23:         :method => :delete %>
+24:       <%= link_to "Like", photo %>
+25:   </div>
+26:   <% end %>
+27: </div>
+
+    app/views/galleries/show.html.erb:24
+    app/views/galleries/show.html.erb:17
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:33:43) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+
+ActionView::TemplateError (undefined method `photo_path' for #<ActionView::Base:0x7f18a9a2d5a0>) on line #24 of app/views/galleries/show.html.erb:
+21:       <%= link_to "Edit", edit_gallery_photo_path(@gallery, photo) %> |
+22:       <%= link_to "Destroy", [@gallery, photo], :confirm => 'Are you sure?',
+23:         :method => :delete %>
+24:       <%= link_to "Like", photo %>
+25:   </div>
+26:   <% end %>
+27: </div>
+
+    app/views/galleries/show.html.erb:24
+    app/views/galleries/show.html.erb:17
+
+Rendered rescues/_trace (45.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:33:46) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+
+ActionView::TemplateError (undefined method `photo_path' for #<ActionView::Base:0x7f18a9620390>) on line #24 of app/views/galleries/show.html.erb:
+21:       <%= link_to "Edit", edit_gallery_photo_path(@gallery, photo) %> |
+22:       <%= link_to "Destroy", [@gallery, photo], :confirm => 'Are you sure?',
+23:         :method => :delete %>
+24:       <%= link_to "Like", photo %>
+25:   </div>
+26:   <% end %>
+27: </div>
+
+    app/views/galleries/show.html.erb:24
+    app/views/galleries/show.html.erb:17
+
+Rendered rescues/_trace (86.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:33:54) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+
+ActionView::TemplateError (undefined method `photo_path' for #<ActionView::Base:0x7f18a976c190>) on line #24 of app/views/galleries/show.html.erb:
+21:       <%= link_to "Edit", edit_gallery_photo_path(@gallery, photo) %> |
+22:       <%= link_to "Destroy", [@gallery, photo], :confirm => 'Are you sure?',
+23:         :method => :delete %>
+24:       <%= link_to "Like", photo %>
+25:   </div>
+26:   <% end %>
+27: </div>
+
+    app/views/galleries/show.html.erb:24
+    app/views/galleries/show.html.erb:17
+
+Rendered rescues/_trace (123.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:34:23) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 25ms (View: 18, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-05 00:34:28) [GET]
+  Parameters: {"id"=>"4", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 22ms (View: 5, DB: 2) | 200 OK [http://localhost/galleries/3/photos/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:34:31) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 80ms (View: 73, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:34:37) [GET]
+  Parameters: {"id"=>"like"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Gallery with ID=like):
+  app/controllers/galleries_controller.rb:7:in `show'
+
+Rendered rescues/_trace (33.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:35:11) [GET]
+  Parameters: {"id"=>"like"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Gallery with ID=like):
+  app/controllers/galleries_controller.rb:7:in `show'
+
+Rendered rescues/_trace (44.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:35:17) [GET]
+  Parameters: {"id"=>"like"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Gallery with ID=like):
+  app/controllers/galleries_controller.rb:7:in `show'
+
+Rendered rescues/_trace (34.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:35:17) [GET]
+  Parameters: {"id"=>"like"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Gallery with ID=like):
+  app/controllers/galleries_controller.rb:7:in `show'
+
+Rendered rescues/_trace (32.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:35:18) [GET]
+  Parameters: {"id"=>"like"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Gallery with ID=like):
+  app/controllers/galleries_controller.rb:7:in `show'
+
+Rendered rescues/_trace (34.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:35:18) [GET]
+  Parameters: {"id"=>"like"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Gallery with ID=like):
+  app/controllers/galleries_controller.rb:7:in `show'
+
+Rendered rescues/_trace (32.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:35:18) [GET]
+  Parameters: {"id"=>"like"}
+  [4;36;1mGallery Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Gallery with ID=like):
+  app/controllers/galleries_controller.rb:7:in `show'
+
+Rendered rescues/_trace (108.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:35:18) [GET]
+  Parameters: {"id"=>"like"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Gallery with ID=like):
+  app/controllers/galleries_controller.rb:7:in `show'
+
+Rendered rescues/_trace (32.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:35:22) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+
+ActionView::TemplateError (undefined method `photo_path' for #<ActionView::Base:0x7f18a96b5878>) on line #24 of app/views/galleries/show.html.erb:
+21:       <%= link_to "Edit", edit_gallery_photo_path(@gallery, photo) %> |
+22:       <%= link_to "Destroy", [@gallery, photo], :confirm => 'Are you sure?',
+23:         :method => :delete %>
+24:       <%= link_to "Like", photo %>
+25:   </div>
+26:   <% end %>
+27: </div>
+
+    app/views/galleries/show.html.erb:24
+    app/views/galleries/show.html.erb:17
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:35:41) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 27ms (View: 21, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-05 00:35:43) [GET]
+  Parameters: {"id"=>"4", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 83ms (View: 73, DB: 2) | 200 OK [http://localhost/galleries/3/photos/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-05 00:36:27) [GET]
+  Parameters: {"id"=>"4", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 20ms (View: 6, DB: 2) | 200 OK [http://localhost/galleries/3/photos/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:36:30) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 26ms (View: 18, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:36:33) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 21ms (View: 15, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#3 (for 127.0.0.1 at 2010-12-05 00:36:34) [POST]
+
+ActionController::UnknownAction (No action responded to 3. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#3 (for 127.0.0.1 at 2010-12-05 00:37:00) [POST]
+
+ActionController::UnknownAction (No action responded to 3. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#3 (for 127.0.0.1 at 2010-12-05 00:37:04) [POST]
+
+ActionController::UnknownAction (No action responded to 3. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:37:07) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 24ms (View: 17, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:37:25) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 25ms (View: 18, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-05 00:37:28) [GET]
+  Parameters: {"id"=>"4", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 16ms (View: 5, DB: 2) | 200 OK [http://localhost/galleries/3/photos/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:37:31) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 20ms (View: 13, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:38:26) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 23ms (View: 16, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-05 00:38:27) [GET]
+  Parameters: {"id"=>"4", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 16ms (View: 5, DB: 2) | 200 OK [http://localhost/galleries/3/photos/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:38:29) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 20ms (View: 13, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:38:45) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 30ms (View: 23, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:40:16) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+
+ActionView::TemplateError (undefined method `update_gallery_photo' for #<ActionView::Base:0x7f18a98b2ec8>) on line #24 of app/views/galleries/show.html.erb:
+21:       <%= link_to "Edit", edit_gallery_photo_path(@gallery, photo) %> |
+22:       <%= link_to "Destroy", [@gallery, photo], :confirm => 'Are you sure?',
+23:         :method => :delete %>
+24:       <%= link_to "Like", update_gallery_photo(params[:photo]) %>
+25:   </div>
+26:   <% end %>
+27: </div>
+
+    app/views/galleries/show.html.erb:24
+    app/views/galleries/show.html.erb:17
+
+Rendered rescues/_trace (113.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:40:28) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 25ms (View: 18, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:42:07) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.1ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 19ms (View: 12, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-05 00:42:10) [GET]
+  Parameters: {"gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (4.0ms)
+Completed in 85ms (View: 74, DB: 2) | 200 OK [http://localhost/galleries/3/photos/new]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-05 00:42:13) [POST]
+  Parameters: {"photo"=>{"name"=>"JOsh"}, "commit"=>"Save changes", "gallery_id"=>"3"}
+  [4;35;1mGallery Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO `photos` (`name`, `rating`, `created_at`, `updated_at`, `gallery_id`) VALUES('JOsh', NULL, '2010-12-05 05:42:13', '2010-12-05 05:42:13', 3)[0m
+  [4;35;1mSQL (41.8ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/galleries/3/photos/5
+Completed in 62ms (DB: 44) | 302 Found [http://localhost/galleries/3/photos]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-05 00:42:13) [GET]
+  Parameters: {"id"=>"5", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 17ms (View: 6, DB: 2) | 200 OK [http://localhost/galleries/3/photos/5]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2010-12-05 00:42:16) [DELETE]
+  Parameters: {"id"=>"5", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 5 AND (`photos`.gallery_id = 3)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPhoto Destroy (0.2ms)[0m   [0mDELETE FROM `photos` WHERE `id` = 5[0m
+  [4;36;1mSQL (99.4ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/galleries/3
+Completed in 113ms (DB: 101) | 302 Found [http://localhost/galleries/3/photos/5]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:42:17) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Completed in 22ms (View: 14, DB: 2) | 200 OK [http://localhost/galleries/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2010-12-05 00:42:20) [DELETE]
+  Parameters: {"id"=>"4", "gallery_id"=>"3"}
+  [4;35;1mGallery Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.6ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mPhoto Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.`id` = 4 AND (`photos`.gallery_id = 3)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mPhoto Destroy (0.2ms)[0m   [0;1mDELETE FROM `photos` WHERE `id` = 4[0m
+  [4;35;1mSQL (49.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/galleries/3
+Completed in 75ms (DB: 52) | 302 Found [http://localhost/galleries/3/photos/4]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:42:20) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://localhost/galleries/3]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:42:45) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.1ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/galleries/3]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-05 00:42:46) [GET]
+  Parameters: {"gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (9.1ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (13.7ms)
+Completed in 50ms (View: 19, DB: 10) | 200 OK [http://localhost/galleries/3/photos/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-05 00:42:50) [POST]
+  Parameters: {"photo"=>{"name"=>"Josh on the bed"}, "commit"=>"Save changes", "gallery_id"=>"3"}
+  [4;35;1mGallery Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `galleries`[0m
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Create (0.2ms)[0m   [0;1mINSERT INTO `photos` (`name`, `rating`, `created_at`, `updated_at`, `gallery_id`) VALUES('Josh on the bed', NULL, '2010-12-05 05:42:50', '2010-12-05 05:42:50', 3)[0m
+  [4;35;1mSQL (51.6ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/galleries/3/photos/6
+Completed in 69ms (DB: 54) | 302 Found [http://localhost/galleries/3/photos]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-05 00:42:50) [GET]
+  Parameters: {"id"=>"6", "gallery_id"=>"3"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+  [4;36;1mPhoto Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `photos`[0m
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM `photos` WHERE (`photos`.`id` = 6 AND (`photos`.gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 17ms (View: 6, DB: 2) | 200 OK [http://localhost/galleries/3/photos/6]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-05 00:42:53) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `galleries`[0m
+  [4;35;1mGallery Load (0.1ms)[0m   [0mSELECT * FROM `galleries` WHERE (`galleries`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM `photos` WHERE (`photos`.gallery_id = 3) [0m
+  [4;35;1mPhoto Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `photos`[0m
+Completed in 21ms (View: 13, DB: 2) | 200 OK [http://localhost/galleries/3]
