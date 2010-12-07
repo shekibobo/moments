@@ -13092,3 +13092,108 @@ Rendering template within layouts/application
 Rendering galleries/show
   [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 2) [0m
 Completed in 22ms (View: 15, DB: 1) | 200 OK [http://localhost/galleries/2]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-06 12:09:54) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 270ms (View: 267, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-06 12:10:06) [GET]
+  [4;36;1mGallery Load (15.5ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Completed in 193ms (View: 138, DB: 17) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-06 12:10:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.5ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 64ms (View: 58, DB: 1) | 200 OK [http://localhost/galleries/1]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-06 12:19:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.5ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 93ms (View: 87, DB: 1) | 200 OK [http://localhost/galleries/1]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-06 12:19:58) [GET]
+  Parameters: {"id"=>"1", "_"=>"1291655998082", "gallery_id"=>"1"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 1 AND ("photos".gallery_id = 1)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 36ms (View: 25, DB: 1) | 200 OK [http://localhost/galleries/1/photos/1?_=1291655998082]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-06 12:20:03) [GET]
+  Parameters: {"id"=>"1", "_"=>"1291656003846", "gallery_id"=>"1"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 1 AND ("photos".gallery_id = 1)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 20ms (View: 8, DB: 1) | 200 OK [http://localhost/galleries/1/photos/1?_=1291656003846]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-06 12:20:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.5ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 89ms (View: 82, DB: 1) | 200 OK [http://localhost/galleries/1]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-06 12:25:58) [GET]
+  [4;35;1mGallery Load (0.5ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Completed in 26ms (View: 20, DB: 2) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-06 12:26:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mGallery Load (0.2ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Completed in 21ms (View: 15, DB: 1) | 200 OK [http://localhost/galleries/2]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-06 12:26:05) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mGallery Load (0.2ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Completed in 80ms (View: 74, DB: 1) | 200 OK [http://localhost/galleries/2]
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-12-06 12:26:10) [GET]
+  Parameters: {"id"=>"3", "gallery_id"=>"2"}
+  [4;36;1mGallery Load (0.2ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 2) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 3 AND ("photos".gallery_id = 2)) [0m
+Rendering template within layouts/application
+Rendering photos/edit
+Rendered photos/_form (10.1ms)
+Completed in 40ms (View: 29, DB: 1) | 200 OK [http://localhost/galleries/2/photos/3/edit]

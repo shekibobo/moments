@@ -11,7 +11,7 @@
 <div class="grid">
   <% for photo in @gallery.photos %>
   <div class="cell">
-    <%= link_to (image_tag photo.image.url(:small)), [@gallery, photo] %><br />
+    <%= link_to (image_tag photo.image.url(:small)), photo.image.url, :class => "top_up" %><br />
     <p class="details">
       <%=h photo.name %> - Rating: <%=h photo.rating %><br />
       <%= link_to "Edit", edit_gallery_photo_path(@gallery, photo) %> |
@@ -21,4 +21,3 @@
   </div>
   <% end %>
 </div>
-
