@@ -13197,3 +13197,2267 @@ Rendering template within layouts/application
 Rendering photos/edit
 Rendered photos/_form (10.1ms)
 Completed in 40ms (View: 29, DB: 1) | 200 OK [http://localhost/galleries/2/photos/3/edit]
+  [4;36;1mGallery Load (0.2ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 0) [0m
+  [4;35;1mPhoto Create (0.4ms)[0m   [0mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('console_image', NULL, '2010-12-07 03:28:27', '/home/joshua/Desktop/sudoku.jpg', NULL, '2010-12-07 03:28:27', NULL, NULL, 0)[0m
+[paperclip] Saving attachments.
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-06 22:28:54) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 105ms (View: 103, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-06 22:28:57) [GET]
+  [4;36;1mGallery Load (0.7ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Completed in 86ms (View: 75, DB: 2) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-06 22:28:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.5ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 29ms (View: 22, DB: 1) | 200 OK [http://localhost/galleries/1]
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" LIMIT 1[0m
+  [4;35;1mPhoto Load (1.0ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mPhoto Load (1.4ms)[0m   [0;1mSELECT * FROM "photos" [0m
+  [4;35;1mPhoto Load (0.8ms)[0m   [0mSELECT * FROM "photos" ORDER BY photos.id DESC LIMIT 1[0m
+[paperclip] identify -format %wx%h '/tmp/stream20101206-17125-hll9d1-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101206-17125-hll9d1-0.jpg[0]' -resize "150x150>" '/tmp/stream20101206-17125-hll9d1-020101206-17125-1pwu8r8-0' 2>/dev/null
+  [4;36;1mGallery Load (0.4ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 0) [0m
+  [4;35;1mPhoto Update (0.4ms)[0m   [0mUPDATE "photos" SET "updated_at" = '2010-12-07 03:33:57', "image_file_size" = 39335, "image_file_name" = 'sudoku.jpg', "image_content_type" = 'image/jpeg', "image_updated_at" = '2010-12-07 03:33:54' WHERE "id" = 5[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/system/images/5/original/sudoku.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/system/images/5/small/sudoku.jpg
+  [4;36;1mPhoto Load (0.9ms)[0m   [0;1mSELECT * FROM "photos" ORDER BY photos.id DESC LIMIT 1[0m
+  [4;35;1mPhoto Load (0.9ms)[0m   [0mSELECT * FROM "photos" ORDER BY photos.id DESC LIMIT 1[0m
+[paperclip] Deleting attachments.
+[paperclip] deleting /home/joshua/railscamp/moments/public/system/images/5/original/sudoku.jpg
+[paperclip] deleting /home/joshua/railscamp/moments/public/system/images/5/small/sudoku.jpg
+  [4;36;1mPhoto Destroy (0.5ms)[0m   [0;1mDELETE FROM "photos" WHERE "id" = 5[0m
+  [4;35;1mPhoto Load (0.9ms)[0m   [0mSELECT * FROM "photos" ORDER BY photos.id DESC LIMIT 1[0m
+[paperclip] identify -format %wx%h '/tmp/stream20101206-17125-132dvn1-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101206-17125-132dvn1-0.jpg[0]' -resize "150x150>" '/tmp/stream20101206-17125-132dvn1-020101206-17125-srnawz-0' 2>/dev/null
+  [4;36;1mGallery Load (0.7ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mPhoto Create (0.5ms)[0m   [0mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('sudoku.jpg', NULL, '2010-12-07 03:46:19', 'sudoku.jpg', 39335, '2010-12-07 03:46:19', 'image/jpeg', '2010-12-07 03:37:34', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/system/images/6/original/sudoku.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/system/images/6/small/sudoku.jpg
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-06 22:46:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/galleries/1]
+  [4;36;1mPhoto Update (0.5ms)[0m   [0;1mUPDATE "photos" SET "updated_at" = '2010-12-07 03:52:27', "name" = 'sudoku' WHERE "id" = 6[0m
+[paperclip] Saving attachments.
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-06 22:52:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 27ms (View: 21, DB: 1) | 200 OK [http://localhost/galleries/1]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 01:42:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGallery Load (0.2ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.6ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 29ms (View: 22, DB: 1) | 200 OK [http://localhost/galleries/1]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 01:43:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mGallery Load (0.2ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.6ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 47ms (View: 36, DB: 1) | 200 OK [http://localhost/galleries/1]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-07 01:43:12) [GET]
+  [4;36;1mGallery Load (0.6ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Completed in 93ms (View: 26, DB: 2) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#new (for 127.0.0.1 at 2010-12-07 01:43:15) [GET]
+Rendering template within layouts/application
+Rendering galleries/new
+Rendered galleries/_form (23.3ms)
+Completed in 57ms (View: 52, DB: 0) | 200 OK [http://localhost/galleries/new]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-07 01:47:09) [GET]
+  [4;36;1mGallery Load (0.7ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Completed in 46ms (View: 36, DB: 2) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#new (for 127.0.0.1 at 2010-12-07 01:47:12) [GET]
+Rendering template within layouts/application
+Rendering galleries/new
+Rendered galleries/_form (10.2ms)
+Completed in 84ms (View: 20, DB: 0) | 200 OK [http://localhost/galleries/new]
+
+
+Processing GalleriesController#create (for 127.0.0.1 at 2010-12-07 01:47:44) [POST]
+  Parameters: {"commit"=>"Save changes", "gallery"=>{"name"=>"Blabber", "shoot_date(1i)"=>"2010", "shoot_date(2i)"=>"12", "shoot_date(3i)"=>"7", "user_id"=>"3", "collection"=>"delrosario.zip"}}
+
+Paperclip::PaperclipError (Gallery model missing required attr_accessor for 'collection_file_name'):
+  paperclip (2.3.5) lib/paperclip/attachment.rb:264:in `ensure_required_accessors!'
+  paperclip (2.3.5) lib/paperclip/attachment.rb:262:in `each'
+  paperclip (2.3.5) lib/paperclip/attachment.rb:262:in `ensure_required_accessors!'
+  paperclip (2.3.5) lib/paperclip/attachment.rb:78:in `assign'
+  paperclip (2.3.5) lib/paperclip.rb:246:in `collection='
+  app/controllers/galleries_controller.rb:15:in `new'
+  app/controllers/galleries_controller.rb:15:in `create'
+
+Rendered rescues/_trace (37.5ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGalleries (20101205040201)
+Migrating to CreatePhotos (20101205041003)
+Migrating to AddImageToPhotos (20101205173411)
+Migrating to AddAttachmentsCollectionToGallery (20101207021156)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "galleries" ADD "collection_file_name" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "galleries" ADD "collection_content_type" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "galleries" ADD "collection_file_size" integer[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "galleries" ADD "collection_updated_at" datetime[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101207021156')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("galleries")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("photos")[0m
+
+
+Processing GalleriesController#create (for 127.0.0.1 at 2010-12-07 01:48:20) [POST]
+  Parameters: {"commit"=>"Save changes", "gallery"=>{"name"=>"Blabber", "shoot_date(1i)"=>"2010", "shoot_date(2i)"=>"12", "shoot_date(3i)"=>"7", "user_id"=>"3", "collection"=>"delrosario.zip"}}
+  [4;35;1mGallery Create (0.3ms)[0m   [0mINSERT INTO "galleries" ("name", "collection_file_name", "created_at", "updated_at", "collection_updated_at", "shoot_date", "collection_content_type", "collection_file_size", "user_id") VALUES('Blabber', NULL, '2010-12-07 06:48:20', '2010-12-07 06:48:20', NULL, '2010-12-07', NULL, NULL, 3)[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/galleries/4
+Completed in 150ms (DB: 0) | 302 Found [http://localhost/galleries]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 01:48:20) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGallery Load (0.4ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 4) [0m
+Completed in 24ms (View: 15, DB: 1) | 200 OK [http://localhost/galleries/4]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-07 01:48:31) [GET]
+  [4;36;1mGallery Load (0.7ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 4) [0m
+Completed in 31ms (View: 24, DB: 2) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 01:48:33) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 4) [0m
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/galleries/4]
+
+
+Processing GalleriesController#destroy (for 127.0.0.1 at 2010-12-07 01:49:02) [DELETE]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 4) [0m
+[paperclip] Deleting attachments.
+  [4;36;1mGallery Destroy (0.2ms)[0m   [0;1mDELETE FROM "galleries" WHERE "id" = 4[0m
+Redirected to http://localhost:3000/galleries
+Completed in 111ms (DB: 1) | 302 Found [http://localhost/galleries/4]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-07 01:49:02) [GET]
+  [4;35;1mGallery Load (0.6ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Completed in 32ms (View: 24, DB: 2) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#new (for 127.0.0.1 at 2010-12-07 01:49:04) [GET]
+Rendering template within layouts/application
+Rendering galleries/new
+Rendered galleries/_form (9.0ms)
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/galleries/new]
+
+
+Processing GalleriesController#create (for 127.0.0.1 at 2010-12-07 01:49:21) [POST]
+  Parameters: {"commit"=>"Save changes", "gallery"=>{"name"=>"Blabber", "shoot_date(1i)"=>"2010", "shoot_date(2i)"=>"12", "shoot_date(3i)"=>"7", "user_id"=>"3", "collection"=>"delrosario.zip"}}
+  [4;36;1mGallery Create (0.3ms)[0m   [0;1mINSERT INTO "galleries" ("name", "collection_file_name", "created_at", "updated_at", "collection_updated_at", "shoot_date", "collection_content_type", "collection_file_size", "user_id") VALUES('Blabber', NULL, '2010-12-07 06:49:21', '2010-12-07 06:49:21', NULL, '2010-12-07', NULL, NULL, 3)[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/galleries/5
+Completed in 115ms (DB: 0) | 302 Found [http://localhost/galleries]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 01:49:21) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 5) [0m
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/galleries/5]
+
+
+Processing GalleriesController#destroy (for 127.0.0.1 at 2010-12-07 01:51:17) [DELETE]
+  Parameters: {"id"=>"5"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 5) [0m
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 5) [0m
+[paperclip] Deleting attachments.
+  [4;35;1mGallery Destroy (0.2ms)[0m   [0mDELETE FROM "galleries" WHERE "id" = 5[0m
+Redirected to http://localhost:3000/galleries
+Completed in 103ms (DB: 1) | 302 Found [http://localhost/galleries/5]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-07 01:51:17) [GET]
+  [4;36;1mGallery Load (0.7ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 2) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Completed in 30ms (View: 23, DB: 2) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#new (for 127.0.0.1 at 2010-12-07 01:51:20) [GET]
+Rendering template within layouts/application
+Rendering galleries/new
+Rendered galleries/_form (10.3ms)
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/galleries/new]
+
+
+Processing GalleriesController#create (for 127.0.0.1 at 2010-12-07 01:51:31) [POST]
+  Parameters: {"commit"=>"Save changes", "gallery"=>{"name"=>"Blabber", "shoot_date(1i)"=>"2010", "shoot_date(2i)"=>"12", "shoot_date(3i)"=>"7", "user_id"=>"3", "collection"=>"delrosario.zip"}}
+  [4;35;1mGallery Create (0.3ms)[0m   [0mINSERT INTO "galleries" ("name", "collection_file_name", "created_at", "updated_at", "collection_updated_at", "shoot_date", "collection_content_type", "collection_file_size", "user_id") VALUES('Blabber', NULL, '2010-12-07 06:51:31', '2010-12-07 06:51:31', NULL, '2010-12-07', NULL, NULL, 3)[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/galleries/6
+Completed in 116ms (DB: 0) | 302 Found [http://localhost/galleries]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 01:51:31) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 6) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 6) [0m
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/galleries/6]
+
+
+Processing GalleriesController#destroy (for 127.0.0.1 at 2010-12-07 01:52:16) [DELETE]
+  Parameters: {"id"=>"6"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 6) [0m
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 6) [0m
+[paperclip] Deleting attachments.
+  [4;36;1mGallery Destroy (0.2ms)[0m   [0;1mDELETE FROM "galleries" WHERE "id" = 6[0m
+Redirected to http://localhost:3000/galleries
+Completed in 115ms (DB: 1) | 302 Found [http://localhost/galleries/6]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-07 01:52:17) [GET]
+  [4;35;1mGallery Load (0.7ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 2) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Completed in 33ms (View: 24, DB: 2) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#new (for 127.0.0.1 at 2010-12-07 01:53:34) [GET]
+Rendering template within layouts/application
+Rendering galleries/new
+Rendered galleries/_form (9.2ms)
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/galleries/new]
+
+
+Processing GalleriesController#create (for 127.0.0.1 at 2010-12-07 01:53:42) [POST]
+  Parameters: {"commit"=>"Save changes", "gallery"=>{"name"=>"Blabber", "shoot_date(1i)"=>"2010", "shoot_date(2i)"=>"12", "shoot_date(3i)"=>"7", "user_id"=>"3", "collection"=>"delrosario.zip"}}
+  [4;36;1mGallery Create (6.2ms)[0m   [0;1mINSERT INTO "galleries" ("name", "collection_file_name", "created_at", "updated_at", "collection_updated_at", "shoot_date", "collection_content_type", "collection_file_size", "user_id") VALUES('Blabber', NULL, '2010-12-07 06:53:42', '2010-12-07 06:53:42', NULL, '2010-12-07', NULL, NULL, 3)[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/galleries/7
+Completed in 134ms (DB: 6) | 302 Found [http://localhost/galleries]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 01:53:42) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 7) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (1.8ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 7) [0m
+Completed in 29ms (View: 15, DB: 2) | 200 OK [http://localhost/galleries/7]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (174.8ms)[0m   [0;1mCREATE TABLE "galleries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "user_id" integer, "shoot_date" date, "created_at" datetime, "updated_at" datetime, "collection_file_name" varchar(255), "collection_content_type" varchar(255), "collection_file_size" integer, "collection_updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (94.5ms)[0m   [0;1mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "gallery_id" integer, "name" varchar(255), "rating" decimal, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar(255), "image_content_type" varchar(255), "image_file_size" integer, "image_updated_at" datetime) [0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (125.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (94.4ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (86.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20101207021156')[0m
+  [4;36;1mSQL (88.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20101205041003')[0m
+  [4;35;1mSQL (88.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20101205173411')[0m
+  [4;36;1mSQL (88.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20101205040201')[0m
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 11:33:59) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mGallery Load (0.1ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 7) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Gallery with ID=7):
+  app/controllers/galleries_controller.rb:7:in `show'
+
+Rendered rescues/_trace (34.4ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-07 11:34:02) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-07 11:34:04) [GET]
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#new (for 127.0.0.1 at 2010-12-07 11:34:06) [GET]
+Rendering template within layouts/application
+Rendering galleries/new
+Rendered galleries/_form (14.2ms)
+Completed in 29ms (View: 23, DB: 0) | 200 OK [http://localhost/galleries/new]
+
+
+Processing GalleriesController#create (for 127.0.0.1 at 2010-12-07 11:34:23) [POST]
+  Parameters: {"commit"=>"Save changes", "gallery"=>{"name"=>"Senior Photos", "shoot_date(1i)"=>"2010", "shoot_date(2i)"=>"12", "shoot_date(3i)"=>"7", "user_id"=>"1", "collection"=>""}}
+  [4;36;1mGallery Create (0.4ms)[0m   [0;1mINSERT INTO "galleries" ("name", "collection_file_name", "created_at", "updated_at", "collection_updated_at", "shoot_date", "collection_content_type", "collection_file_size", "user_id") VALUES('Senior Photos', NULL, '2010-12-07 16:34:23', '2010-12-07 16:34:23', NULL, '2010-12-07', NULL, NULL, 1)[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/galleries/1
+Completed in 124ms (DB: 0) | 302 Found [http://localhost/galleries]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 11:34:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGallery Load (7.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 83ms (View: 16, DB: 8) | 200 OK [http://localhost/galleries/1]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-07 11:34:26) [GET]
+  Parameters: {"gallery_id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (16.5ms)
+Completed in 50ms (View: 37, DB: 0) | 200 OK [http://localhost/galleries/1/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-07 11:35:43) [POST]
+  Parameters: {"photo"=>{"name"=>"delrosario001", "image"=>#<File:/tmp/RackMultipart20101207-17808-171opg2-0>}, "commit"=>"Save changes", "gallery_id"=>"1"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+[paperclip] identify -format %wx%h '/tmp/stream20101207-17808-v9qhrj-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101207-17808-v9qhrj-0.jpg[0]' -resize "150x150>" '/tmp/stream20101207-17808-v9qhrj-020101207-17808-pxzlwk-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101207-17808-v9qhrj-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101207-17808-v9qhrj-0.jpg[0]' -resize "480x480>" '/tmp/stream20101207-17808-v9qhrj-020101207-17808-gglwet-0' 2>/dev/null
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.7ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario001', NULL, '2010-12-07 16:35:44', 'delrosario_001_std.jpg', 24074, '2010-12-07 16:35:44', 'image/jpeg', '2010-12-07 16:35:43', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/assets/:gallery/smalls/1.jpg
+[paperclip] saving /home/joshua/railscamp/moments/assets/:gallery/originals/1.jpg
+Redirected to http://localhost:3000/galleries/1/photos/1
+Completed in 310ms (DB: 1) | 302 Found [http://localhost/galleries/1/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-07 11:35:44) [GET]
+  Parameters: {"id"=>"1", "gallery_id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 1 AND ("photos".gallery_id = 1)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 41ms (View: 27, DB: 1) | 200 OK [http://localhost/galleries/1/photos/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 11:35:44) [GET]
+  Parameters: {"1291739743"=>nil}
+
+ActionController::RoutingError (No route matches "/:gallery/photos/original/1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 11:35:44) [GET]
+  Parameters: {"1291739743"=>nil}
+
+ActionController::RoutingError (No route matches "/:gallery/photos/original/1.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2010-12-07 11:36:18) [DELETE]
+  Parameters: {"id"=>"1", "gallery_id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 1 AND ("photos".gallery_id = 1)) [0m
+[paperclip] Deleting attachments.
+[paperclip] deleting /home/joshua/railscamp/moments/assets/:gallery/originals/1.jpg
+[paperclip] deleting /home/joshua/railscamp/moments/assets/:gallery/smalls/1.jpg
+  [4;35;1mPhoto Destroy (0.3ms)[0m   [0mDELETE FROM "photos" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/galleries/1
+Completed in 108ms (DB: 1) | 302 Found [http://localhost/galleries/1/photos/1]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 11:36:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/galleries/1]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-07 11:36:19) [GET]
+  Parameters: {"gallery_id"=>"1"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (4.4ms)
+Completed in 22ms (View: 8, DB: 0) | 200 OK [http://localhost/galleries/1/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-07 11:36:25) [POST]
+  Parameters: {"photo"=>{"name"=>"saaf", "image"=>#<File:/tmp/RackMultipart20101207-17808-1tjk47q-0>}, "commit"=>"Save changes", "gallery_id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+[paperclip] identify -format %wx%h '/tmp/stream20101207-17808-5qc57y-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101207-17808-5qc57y-0.jpg[0]' -resize "150x150>" '/tmp/stream20101207-17808-5qc57y-020101207-17808-15vbbd4-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101207-17808-5qc57y-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101207-17808-5qc57y-0.jpg[0]' -resize "480x480>" '/tmp/stream20101207-17808-5qc57y-020101207-17808-uyl8rh-0' 2>/dev/null
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mPhoto Create (0.3ms)[0m   [0mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('saaf', NULL, '2010-12-07 16:36:25', 'delrosario_001_std.jpg', 24074, '2010-12-07 16:36:25', 'image/jpeg', '2010-12-07 16:36:25', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/assets/:gallery/smalls/2.jpg
+[paperclip] saving /home/joshua/railscamp/moments/assets/:gallery/originals/2.jpg
+Redirected to http://localhost:3000/galleries/1/photos/2
+Completed in 290ms (DB: 1) | 302 Found [http://localhost/galleries/1/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-07 11:36:25) [GET]
+  Parameters: {"id"=>"2", "gallery_id"=>"1"}
+  [4;36;1mGallery Load (0.4ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 2 AND ("photos".gallery_id = 1)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 24ms (View: 10, DB: 1) | 200 OK [http://localhost/galleries/1/photos/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 11:36:25) [GET]
+  Parameters: {"1291739785"=>nil}
+
+ActionController::RoutingError (No route matches "/:gallery_id/photos/original/2.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 11:36:26) [GET]
+  Parameters: {"1291739785"=>nil}
+
+ActionController::RoutingError (No route matches "/:gallery_id/photos/original/2.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 11:37:21) [GET]
+  Parameters: {"1291739785"=>nil}
+
+ActionController::RoutingError (No route matches "/:gallery_id/photos/original/2.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2010-12-07 11:38:27) [DELETE]
+  Parameters: {"id"=>"2", "gallery_id"=>"1"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 2 AND ("photos".gallery_id = 1)) [0m
+[paperclip] Deleting attachments.
+[paperclip] deleting /home/joshua/railscamp/moments/assets/:gallery/originals/2.jpg
+  [4;36;1mPhoto Destroy (0.3ms)[0m   [0;1mDELETE FROM "photos" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/galleries/1
+Completed in 114ms (DB: 1) | 302 Found [http://localhost/galleries/1/photos/2]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 11:38:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/galleries/1]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-07 11:38:44) [GET]
+  [4;35;1mGallery Load (0.6ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 80ms (View: 14, DB: 1) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 11:38:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/galleries/1]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-07 11:38:49) [GET]
+  Parameters: {"gallery_id"=>"1"}
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (4.2ms)
+Completed in 21ms (View: 7, DB: 0) | 200 OK [http://localhost/galleries/1/photos/new]
+
+
+Processing PhotosController#index (for 127.0.0.1 at 2010-12-07 11:38:51) [GET]
+  Parameters: {"gallery_id"=>"1"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering photos/index
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 95ms (View: 85, DB: 0) | 200 OK [http://localhost/galleries/1/photos]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-07 11:40:22) [GET]
+  Parameters: {"gallery_id"=>"1"}
+  [4;36;1mGallery Load (0.4ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (4.6ms)
+Completed in 24ms (View: 8, DB: 0) | 200 OK [http://localhost/galleries/1/photos/new]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-07 11:43:51) [GET]
+  Parameters: {"gallery_id"=>"1"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (3.8ms)
+Completed in 94ms (View: 21, DB: 0) | 200 OK [http://localhost/galleries/1/photos/new]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-07 11:46:19) [GET]
+  Parameters: {"gallery_id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (4.9ms)
+Completed in 24ms (View: 9, DB: 0) | 200 OK [http://localhost/galleries/1/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-07 11:46:26) [POST]
+  Parameters: {"photo"=>{"name"=>"", "image"=>#<File:/tmp/RackMultipart20101207-18568-mi1luq-0>}, "commit"=>"Save changes", "gallery_id"=>"1"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/photos_controller.rb:17:in `create'
+
+Rendered rescues/_trace (102.3ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-07 11:46:50) [POST]
+  Parameters: {"photo"=>{"name"=>"", "image"=>#<File:/tmp/RackMultipart20101207-18568-x0irdz-0>}, "commit"=>"Save changes", "gallery_id"=>"1"}
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/photos_controller.rb:17:in `create'
+
+Rendered rescues/_trace (38.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-07 11:46:58) [POST]
+  Parameters: {"photo"=>{"name"=>"", "image"=>#<File:/tmp/RackMultipart20101207-18568-1b0b8uu-0>}, "commit"=>"Save changes", "gallery_id"=>"1"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/photos_controller.rb:17:in `create'
+
+Rendered rescues/_trace (38.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-07 11:48:39) [POST]
+  Parameters: {"photo"=>{"name"=>"", "image"=>#<File:/tmp/RackMultipart20101207-18568-1glk08w-0>}, "commit"=>"Save changes", "gallery_id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/photos_controller.rb:17:in `create'
+
+Rendered rescues/_trace (36.8ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-07 11:49:26) [GET]
+  [4;36;1mGallery Load (0.6ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 29ms (View: 21, DB: 1) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 11:49:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/galleries/1]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-07 11:49:30) [GET]
+  Parameters: {"gallery_id"=>"1"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (4.5ms)
+Completed in 21ms (View: 8, DB: 0) | 200 OK [http://localhost/galleries/1/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-07 11:49:34) [POST]
+  Parameters: {"photo"=>{"name"=>"", "image"=>#<File:/tmp/RackMultipart20101207-18568-mbxkcr-0>}, "commit"=>"Save changes", "gallery_id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+[paperclip] identify -format %wx%h '/tmp/stream20101207-18568-46z69-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101207-18568-46z69-0.jpg[0]' -resize "150x150>" '/tmp/stream20101207-18568-46z69-020101207-18568-3f39rs-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101207-18568-46z69-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101207-18568-46z69-0.jpg[0]' -resize "480x480>" '/tmp/stream20101207-18568-46z69-020101207-18568-1yawkg5-0' 2>/dev/null
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mPhoto Create (0.4ms)[0m   [0mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('', NULL, '2010-12-07 16:49:34', 'delrosario_001_std.jpg', 24074, '2010-12-07 16:49:34', 'image/jpeg', '2010-12-07 16:49:34', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/assets/:gallery_id/thumbs/3.jpg
+[paperclip] saving /home/joshua/railscamp/moments/assets/:gallery_id/originals/3.jpg
+Redirected to http://localhost:3000/galleries/1/photos/3
+Completed in 347ms (DB: 1) | 302 Found [http://localhost/galleries/1/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-07 11:49:34) [GET]
+  Parameters: {"id"=>"3", "gallery_id"=>"1"}
+  [4;36;1mGallery Load (0.4ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 3 AND ("photos".gallery_id = 1)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 29ms (View: 14, DB: 1) | 200 OK [http://localhost/galleries/1/photos/3]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 11:49:34) [GET]
+  Parameters: {"1291740574"=>nil}
+
+ActionController::RoutingError (No route matches "/:gallery_id/photos/original/3.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 11:49:35) [GET]
+  Parameters: {"1291740574"=>nil}
+
+ActionController::RoutingError (No route matches "/:gallery_id/photos/original/3.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-07 11:52:02) [GET]
+  [4;36;1mGallery Load (0.6ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 26ms (View: 19, DB: 1) | 200 OK [http://localhost/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 11:52:02) [GET]
+  Parameters: {"1291740574"=>nil}
+
+ActionController::RoutingError (No route matches "/:name/photos/small/3.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 11:52:02) [GET]
+  Parameters: {"1291740574"=>nil}
+
+ActionController::RoutingError (No route matches "/:name/photos/small/3.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#edit (for 127.0.0.1 at 2010-12-07 11:52:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/edit
+Rendered galleries/_form (10.9ms)
+Completed in 38ms (View: 31, DB: 0) | 200 OK [http://localhost/galleries/1/edit]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 11:52:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 87ms (View: 80, DB: 1) | 200 OK [http://localhost/galleries/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 11:52:07) [GET]
+  Parameters: {"1291740574"=>nil}
+
+ActionController::RoutingError (No route matches "/:name/photos/small/3.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 11:52:07) [GET]
+  Parameters: {"1291740574"=>nil}
+
+ActionController::RoutingError (No route matches "/:name/photos/small/3.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2010-12-07 11:52:10) [DELETE]
+  Parameters: {"id"=>"3", "gallery_id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 3 AND ("photos".gallery_id = 1)) [0m
+[paperclip] Deleting attachments.
+  [4;35;1mPhoto Destroy (0.3ms)[0m   [0mDELETE FROM "photos" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/galleries/1
+Completed in 113ms (DB: 1) | 302 Found [http://localhost/galleries/1/photos/3]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 11:52:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.7ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/galleries/1]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-07 11:52:12) [GET]
+  Parameters: {"gallery_id"=>"1"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (4.4ms)
+Completed in 22ms (View: 7, DB: 0) | 200 OK [http://localhost/galleries/1/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-07 11:52:20) [POST]
+  Parameters: {"photo"=>{"name"=>"josh", "image"=>#<File:/tmp/RackMultipart20101207-18568-ok8vud-0>}, "commit"=>"Save changes", "gallery_id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+[paperclip] identify -format %wx%h '/tmp/stream20101207-18568-10mu05k-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101207-18568-10mu05k-0.jpg[0]' -resize "150x150>" '/tmp/stream20101207-18568-10mu05k-020101207-18568-vwzkan-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101207-18568-10mu05k-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101207-18568-10mu05k-0.jpg[0]' -resize "480x480>" '/tmp/stream20101207-18568-10mu05k-020101207-18568-16k96uc-0' 2>/dev/null
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mPhoto Create (0.3ms)[0m   [0mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('josh', NULL, '2010-12-07 16:52:20', 'delrosario_001_std.jpg', 24074, '2010-12-07 16:52:20', 'image/jpeg', '2010-12-07 16:52:20', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/assets/:name/thumbs/4.jpg
+[paperclip] saving /home/joshua/railscamp/moments/assets/:name/originals/4.jpg
+Redirected to http://localhost:3000/galleries/1/photos/4
+Completed in 334ms (DB: 1) | 302 Found [http://localhost/galleries/1/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-07 11:52:21) [GET]
+  Parameters: {"id"=>"4", "gallery_id"=>"1"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 4 AND ("photos".gallery_id = 1)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 25ms (View: 10, DB: 1) | 200 OK [http://localhost/galleries/1/photos/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 11:52:21) [GET]
+  Parameters: {"1291740740"=>nil}
+
+ActionController::RoutingError (No route matches "/:name/photos/original/4.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 11:52:21) [GET]
+  Parameters: {"1291740740"=>nil}
+
+ActionController::RoutingError (No route matches "/:name/photos/original/4.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2010-12-07 11:52:34) [DELETE]
+  Parameters: {"id"=>"4", "gallery_id"=>"1"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 4 AND ("photos".gallery_id = 1)) [0m
+[paperclip] Deleting attachments.
+  [4;36;1mPhoto Destroy (0.3ms)[0m   [0;1mDELETE FROM "photos" WHERE "id" = 4[0m
+Redirected to http://localhost:3000/galleries/1
+Completed in 118ms (DB: 1) | 302 Found [http://localhost/galleries/1/photos/4]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 11:52:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 21ms (View: 13, DB: 1) | 200 OK [http://localhost/galleries/1]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-07 11:52:49) [GET]
+  Parameters: {"gallery_id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (4.6ms)
+Completed in 22ms (View: 8, DB: 0) | 200 OK [http://localhost/galleries/1/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-07 11:52:57) [POST]
+  Parameters: {"photo"=>{"name"=>"josh", "image"=>#<File:/tmp/RackMultipart20101207-18568-7kvx47-0>}, "commit"=>"Save changes", "gallery_id"=>"1"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+[paperclip] identify -format %wx%h '/tmp/stream20101207-18568-1swhyws-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101207-18568-1swhyws-0.jpg[0]' -resize "150x150>" '/tmp/stream20101207-18568-1swhyws-020101207-18568-1l354d0-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101207-18568-1swhyws-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101207-18568-1swhyws-0.jpg[0]' -resize "480x480>" '/tmp/stream20101207-18568-1swhyws-020101207-18568-1tsi1hg-0' 2>/dev/null
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('josh', NULL, '2010-12-07 16:52:57', 'delrosario_001_std.jpg', 24074, '2010-12-07 16:52:57', 'image/jpeg', '2010-12-07 16:52:57', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/assets/:name/thumbs/delrosario_001_std5.jpg
+[paperclip] saving /home/joshua/railscamp/moments/assets/:name/originals/delrosario_001_std5.jpg
+Redirected to http://localhost:3000/galleries/1/photos/5
+Completed in 332ms (DB: 1) | 302 Found [http://localhost/galleries/1/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-07 11:52:58) [GET]
+  Parameters: {"id"=>"5", "gallery_id"=>"1"}
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 5 AND ("photos".gallery_id = 1)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 26ms (View: 11, DB: 1) | 200 OK [http://localhost/galleries/1/photos/5]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 11:52:58) [GET]
+  Parameters: {"1291740777"=>nil}
+
+ActionController::RoutingError (No route matches "/:name/photos/original/5.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 11:52:58) [GET]
+  Parameters: {"1291740777"=>nil}
+
+ActionController::RoutingError (No route matches "/:name/photos/original/5.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2010-12-07 11:53:08) [DELETE]
+  Parameters: {"id"=>"5", "gallery_id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 5 AND ("photos".gallery_id = 1)) [0m
+[paperclip] Deleting attachments.
+  [4;35;1mPhoto Destroy (0.3ms)[0m   [0mDELETE FROM "photos" WHERE "id" = 5[0m
+Redirected to http://localhost:3000/galleries/1
+Completed in 182ms (DB: 1) | 302 Found [http://localhost/galleries/1/photos/5]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 11:53:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mGallery Load (0.4ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/galleries/1]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-07 12:05:28) [GET]
+  [4;36;1mGallery Load (0.8ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+ActionView::TemplateError (undefined local variable or method `gallery_id' for #<Class:0x7f32a05e8268>) on line #6 of app/views/galleries/index.html.erb:
+3: <div class='grid'>
+4:   <% for gallery in @galleries %>
+5:   <div class='cell'>
+6:     <% unless gallery.photos.empty? %>
+7:       <%= link_to (image_tag gallery.photos.first.image.url(:small)), gallery %>
+8:     <% end %>
+9:     <p>
+
+    app/models/photo.rb:9
+    app/views/galleries/index.html.erb:6
+    app/views/galleries/index.html.erb:4:in `each'
+    app/views/galleries/index.html.erb:4
+
+Rendered rescues/_trace (121.0ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GalleriesController#destroy (for 127.0.0.1 at 2010-12-07 12:05:58) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `gallery_id' for #<Class:0x7f32a0600700>):
+  app/models/photo.rb:9
+  app/controllers/galleries_controller.rb:40:in `destroy'
+
+Rendered rescues/_trace (129.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GalleriesController#destroy (for 127.0.0.1 at 2010-12-07 12:06:31) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;36;1mGallery Load (0.4ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/models/photo.rb:9
+  app/controllers/galleries_controller.rb:40:in `destroy'
+
+Rendered rescues/_trace (53.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GalleriesController#destroy (for 127.0.0.1 at 2010-12-07 12:07:00) [DELETE]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+[paperclip] Deleting attachments.
+  [4;35;1mGallery Destroy (0.3ms)[0m   [0mDELETE FROM "galleries" WHERE "id" = 1[0m
+Redirected to http://localhost:3000/galleries
+Completed in 125ms (DB: 1) | 302 Found [http://localhost/galleries/1]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-07 12:07:00) [GET]
+  [4;36;1mGallery Load (0.4ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+Completed in 11ms (View: 5, DB: 0) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-07 12:07:21) [GET]
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#new (for 127.0.0.1 at 2010-12-07 12:07:39) [GET]
+Rendering template within layouts/application
+Rendering galleries/new
+Rendered galleries/_form (14.3ms)
+Completed in 30ms (View: 24, DB: 0) | 200 OK [http://localhost/galleries/new]
+
+
+Processing GalleriesController#create (for 127.0.0.1 at 2010-12-07 12:07:48) [POST]
+  Parameters: {"commit"=>"Save changes", "gallery"=>{"name"=>"blah", "shoot_date(1i)"=>"2010", "shoot_date(2i)"=>"12", "shoot_date(3i)"=>"7", "user_id"=>"1", "collection"=>""}}
+  [4;36;1mGallery Create (0.3ms)[0m   [0;1mINSERT INTO "galleries" ("name", "collection_file_name", "created_at", "updated_at", "collection_updated_at", "shoot_date", "collection_content_type", "collection_file_size", "user_id") VALUES('blah', NULL, '2010-12-07 17:07:48', '2010-12-07 17:07:48', NULL, '2010-12-07', NULL, NULL, 1)[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/galleries/2
+Completed in 95ms (DB: 0) | 302 Found [http://localhost/galleries]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 12:07:48) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://localhost/galleries/2]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-07 12:07:51) [GET]
+  Parameters: {"gallery_id"=>"2"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (3.8ms)
+Completed in 28ms (View: 15, DB: 0) | 200 OK [http://localhost/galleries/2/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-07 12:07:57) [POST]
+  Parameters: {"photo"=>{"name"=>"asdf", "image"=>#<File:/tmp/RackMultipart20101207-20224-1yt38jb-0>}, "commit"=>"Save changes", "gallery_id"=>"2"}
+  [4;36;1mGallery Load (0.4ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 2) [0m
+[paperclip] identify -format %wx%h '/tmp/stream20101207-20224-15m6sr0-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101207-20224-15m6sr0-0.jpg[0]' -resize "480x480>" '/tmp/stream20101207-20224-15m6sr0-020101207-20224-1r9lbww-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101207-20224-15m6sr0-020101207-20224-1r9lbww-0[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101207-20224-15m6sr0-020101207-20224-1r9lbww-0[0]' -resize "150x150>" '/tmp/stream20101207-20224-15m6sr0-020101207-20224-1r9lbww-020101207-20224-bsa1lj-0' 2>/dev/null
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 2) [0m
+  [4;36;1mPhoto Create (0.4ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('asdf', NULL, '2010-12-07 17:07:57', 'delrosario_001_std.jpg', 24074, '2010-12-07 17:07:57', 'image/jpeg', '2010-12-07 17:07:57', 2)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/assets/galleries/originals/delrosario_001_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/assets/galleries/thumbs/delrosario_001_std.jpg
+Redirected to http://localhost:3000/galleries/2/photos/6
+Completed in 382ms (DB: 1) | 302 Found [http://localhost/galleries/2/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-07 12:07:57) [GET]
+  Parameters: {"id"=>"6", "gallery_id"=>"2"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 2) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 6 AND ("photos".gallery_id = 2)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 28ms (View: 14, DB: 1) | 200 OK [http://localhost/galleries/2/photos/6]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 12:07:57) [GET]
+  Parameters: {"1291741677"=>nil}
+
+ActionController::RoutingError (No route matches "/:name/photos/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-07 12:07:57) [GET]
+  Parameters: {"1291741677"=>nil}
+
+ActionController::RoutingError (No route matches "/:name/photos/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2010-12-07 12:08:13) [DELETE]
+  Parameters: {"id"=>"6", "gallery_id"=>"2"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 2) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 6 AND ("photos".gallery_id = 2)) [0m
+[paperclip] Deleting attachments.
+  [4;35;1mPhoto Destroy (0.3ms)[0m   [0mDELETE FROM "photos" WHERE "id" = 6[0m
+Redirected to http://localhost:3000/galleries/2
+Completed in 196ms (DB: 1) | 302 Found [http://localhost/galleries/2/photos/6]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 12:08:13) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/galleries/2]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-07 12:08:16) [GET]
+  Parameters: {"gallery_id"=>"2"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (5.7ms)
+Completed in 23ms (View: 9, DB: 0) | 200 OK [http://localhost/galleries/2/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-07 12:08:21) [POST]
+  Parameters: {"photo"=>{"name"=>"asdf", "image"=>#<File:/tmp/RackMultipart20101207-20224-m6qcum-0>}, "commit"=>"Save changes", "gallery_id"=>"2"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 2) [0m
+[paperclip] identify -format %wx%h '/tmp/stream20101207-20224-qg8l4y-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101207-20224-qg8l4y-0.jpg[0]' -resize "480x480>" '/tmp/stream20101207-20224-qg8l4y-020101207-20224-wgsetg-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101207-20224-qg8l4y-020101207-20224-wgsetg-0[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101207-20224-qg8l4y-020101207-20224-wgsetg-0[0]' -resize "150x150>" '/tmp/stream20101207-20224-qg8l4y-020101207-20224-wgsetg-020101207-20224-3psoui-0' 2>/dev/null
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 2) [0m
+  [4;35;1mPhoto Create (0.3ms)[0m   [0mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('asdf', NULL, '2010-12-07 17:08:21', 'delrosario_001_std.jpg', 24074, '2010-12-07 17:08:21', 'image/jpeg', '2010-12-07 17:08:21', 2)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/assets/galleries/originals/delrosario_001_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/assets/galleries/thumbs/delrosario_001_std.jpg
+Redirected to http://localhost:3000/galleries/2/photos/7
+Completed in 317ms (DB: 1) | 302 Found [http://localhost/galleries/2/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-07 12:08:22) [GET]
+  Parameters: {"id"=>"7", "gallery_id"=>"2"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 2) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 7 AND ("photos".gallery_id = 2)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 23ms (View: 10, DB: 1) | 200 OK [http://localhost/galleries/2/photos/7]
+
+
+Processing PhotosController#original to jpg (for 127.0.0.1 at 2010-12-07 12:08:22) [GET]
+  Parameters: {"id"=>"delrosario_001_std", "1291741701"=>nil}
+
+ActiveRecord::RecordNotFound (Couldn't find Gallery without an ID):
+  app/controllers/photos_controller.rb:50:in `get_gallery'
+
+Rendered rescues/_trace (33.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#original to jpg (for 127.0.0.1 at 2010-12-07 12:08:22) [GET]
+  Parameters: {"id"=>"delrosario_001_std", "1291741701"=>nil}
+
+ActiveRecord::RecordNotFound (Couldn't find Gallery without an ID):
+  app/controllers/photos_controller.rb:50:in `get_gallery'
+
+Rendered rescues/_trace (109.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2010-12-07 12:27:04) [DELETE]
+  Parameters: {"id"=>"7", "gallery_id"=>"2"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 2) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 7 AND ("photos".gallery_id = 2)) [0m
+[paperclip] Deleting attachments.
+[paperclip] deleting /home/joshua/railscamp/moments/assets/galleries/originals/delrosario_001_std.jpg
+[paperclip] deleting /home/joshua/railscamp/moments/assets/galleries/thumbs/delrosario_001_std.jpg
+  [4;36;1mPhoto Destroy (0.3ms)[0m   [0;1mDELETE FROM "photos" WHERE "id" = 7[0m
+Redirected to http://localhost:3000/galleries/2
+Completed in 118ms (DB: 1) | 302 Found [http://localhost/galleries/2/photos/7]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-07 12:27:04) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/galleries/2]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-08 10:59:04) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-08 10:59:32) [GET]
+  [4;36;1mGallery Load (0.7ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+ActionView::TemplateError (undefined local variable or method `gallery_id' for #<Class:0x7f76e62904c8>) on line #6 of app/views/galleries/index.html.erb:
+3: <div class='grid'>
+4:   <% for gallery in @galleries %>
+5:   <div class='cell'>
+6:     <% unless gallery.photos.empty? %>
+7:       <%= link_to (image_tag gallery.photos.first.image.url(:small)), gallery %>
+8:     <% end %>
+9:     <p>
+
+    app/models/photo.rb:9
+    app/views/galleries/index.html.erb:6
+    app/views/galleries/index.html.erb:4:in `each'
+    app/views/galleries/index.html.erb:4
+
+Rendered rescues/_trace (54.7ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-08 11:00:07) [GET]
+  [4;35;1mGallery Load (0.6ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#destroy (for 127.0.0.1 at 2010-12-08 11:00:17) [DELETE]
+  Parameters: {"id"=>"2"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 2) [0m
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 2) [0m
+[paperclip] Deleting attachments.
+  [4;35;1mGallery Destroy (0.3ms)[0m   [0mDELETE FROM "galleries" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/galleries
+Completed in 216ms (DB: 1) | 302 Found [http://localhost/galleries/2]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-08 11:00:17) [GET]
+  [4;36;1mGallery Load (0.4ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#new (for 127.0.0.1 at 2010-12-08 11:00:19) [GET]
+Rendering template within layouts/application
+Rendering galleries/new
+Rendered galleries/_form (13.4ms)
+Completed in 28ms (View: 23, DB: 0) | 200 OK [http://localhost/galleries/new]
+
+
+Processing GalleriesController#create (for 127.0.0.1 at 2010-12-08 11:00:30) [POST]
+  Parameters: {"commit"=>"Save changes", "gallery"=>{"name"=>"Test", "shoot_date(1i)"=>"2010", "shoot_date(2i)"=>"12", "shoot_date(3i)"=>"8", "user_id"=>"1", "collection"=>""}}
+  [4;35;1mGallery Create (0.3ms)[0m   [0mINSERT INTO "galleries" ("name", "collection_file_name", "created_at", "updated_at", "collection_updated_at", "shoot_date", "collection_content_type", "collection_file_size", "user_id") VALUES('Test', NULL, '2010-12-08 16:00:30', '2010-12-08 16:00:30', NULL, '2010-12-08', NULL, NULL, 1)[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/galleries/3
+Completed in 110ms (DB: 0) | 302 Found [http://localhost/galleries]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-08 11:00:30) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Completed in 83ms (View: 76, DB: 0) | 200 OK [http://localhost/galleries/3]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-08 11:00:32) [GET]
+  Parameters: {"gallery_id"=>"3"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (3.5ms)
+Completed in 28ms (View: 15, DB: 0) | 200 OK [http://localhost/galleries/3/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-08 11:00:39) [POST]
+  Parameters: {"photo"=>{"name"=>"image", "image"=>#<File:/tmp/RackMultipart20101208-5604-z9dfii-0>}, "commit"=>"Save changes", "gallery_id"=>"3"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 3) [0m
+[paperclip] identify -format %wx%h '/tmp/stream20101208-5604-d5j0lw-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101208-5604-d5j0lw-0.jpg[0]' -resize "480x480>" '/tmp/stream20101208-5604-d5j0lw-020101208-5604-bwauaq-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101208-5604-d5j0lw-020101208-5604-bwauaq-0[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101208-5604-d5j0lw-020101208-5604-bwauaq-0[0]' -resize "150x150>" '/tmp/stream20101208-5604-d5j0lw-020101208-5604-bwauaq-020101208-5604-108dlaw-0' 2>/dev/null
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 3) [0m
+  [4;35;1mPhoto Create (0.4ms)[0m   [0mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('image', NULL, '2010-12-08 16:00:39', 'delrosario_001_std.jpg', 24074, '2010-12-08 16:00:39', 'image/jpeg', '2010-12-08 16:00:39', 3)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/assets/galleries//originals/delrosario_001_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/assets/galleries//thumbs/delrosario_001_std.jpg
+Redirected to http://localhost:3000/galleries/3/photos/8
+Completed in 487ms (DB: 1) | 302 Found [http://localhost/galleries/3/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-08 11:00:40) [GET]
+  Parameters: {"id"=>"8", "gallery_id"=>"3"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 3) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 8 AND ("photos".gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 103ms (View: 13, DB: 1) | 200 OK [http://localhost/galleries/3/photos/8]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-08 11:00:40) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2010-12-08 11:01:02) [DELETE]
+  Parameters: {"id"=>"8", "gallery_id"=>"3"}
+  [4;36;1mGallery Load (0.4ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 3) [0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 8 AND ("photos".gallery_id = 3)) [0m
+[paperclip] Deleting attachments.
+[paperclip] deleting /home/joshua/railscamp/moments/assets/galleries//originals/delrosario_001_std.jpg
+[paperclip] deleting /home/joshua/railscamp/moments/assets/galleries//thumbs/delrosario_001_std.jpg
+  [4;36;1mPhoto Destroy (0.3ms)[0m   [0;1mDELETE FROM "photos" WHERE "id" = 8[0m
+Redirected to http://localhost:3000/galleries/3
+Completed in 142ms (DB: 1) | 302 Found [http://localhost/galleries/3/photos/8]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-08 11:01:03) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Completed in 21ms (View: 11, DB: 1) | 200 OK [http://localhost/galleries/3]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-08 11:01:09) [GET]
+  Parameters: {"gallery_id"=>"3"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (4.3ms)
+Completed in 22ms (View: 8, DB: 0) | 200 OK [http://localhost/galleries/3/photos/new]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-08 11:01:26) [GET]
+  Parameters: {"gallery_id"=>"3"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (4.5ms)
+Completed in 21ms (View: 8, DB: 0) | 200 OK [http://localhost/galleries/3/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-08 11:01:33) [POST]
+  Parameters: {"photo"=>{"name"=>"image", "image"=>#<File:/tmp/RackMultipart20101208-5604-1mmw9ww-0>}, "commit"=>"Save changes", "gallery_id"=>"3"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 3) [0m
+[paperclip] identify -format %wx%h '/tmp/stream20101208-5604-1qdlws9-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101208-5604-1qdlws9-0.jpg[0]' -resize "480x480>" '/tmp/stream20101208-5604-1qdlws9-020101208-5604-chyes6-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101208-5604-1qdlws9-020101208-5604-chyes6-0[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101208-5604-1qdlws9-020101208-5604-chyes6-0[0]' -resize "150x150>" '/tmp/stream20101208-5604-1qdlws9-020101208-5604-chyes6-020101208-5604-1w91wdw-0' 2>/dev/null
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 3) [0m
+  [4;35;1mPhoto Create (0.3ms)[0m   [0mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('image', NULL, '2010-12-08 16:01:33', 'delrosario_001_std.jpg', 24074, '2010-12-08 16:01:33', 'image/jpeg', '2010-12-08 16:01:33', 3)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/assets/galleries//originals/delrosario_001_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/assets/galleries//thumbs/delrosario_001_std.jpg
+Redirected to http://localhost:3000/galleries/3/photos/9
+Completed in 349ms (DB: 1) | 302 Found [http://localhost/galleries/3/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-08 11:01:34) [GET]
+  Parameters: {"id"=>"9", "gallery_id"=>"3"}
+  [4;36;1mGallery Load (0.4ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 3) [0m
+  [4;35;1mPhoto Load (0.5ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 9 AND ("photos".gallery_id = 3)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 112ms (View: 11, DB: 1) | 200 OK [http://localhost/galleries/3/photos/9]
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2010-12-08 11:02:35) [DELETE]
+  Parameters: {"id"=>"9", "gallery_id"=>"3"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 3) [0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 9 AND ("photos".gallery_id = 3)) [0m
+[paperclip] Deleting attachments.
+  [4;36;1mPhoto Destroy (0.3ms)[0m   [0;1mDELETE FROM "photos" WHERE "id" = 9[0m
+Redirected to http://localhost:3000/galleries/3
+Completed in 143ms (DB: 1) | 302 Found [http://localhost/galleries/3/photos/9]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-08 11:02:35) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/galleries/3]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-12 12:58:23) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 140ms (View: 139, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-12 12:58:26) [GET]
+  [4;36;1mGallery Load (21.3ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+Completed in 116ms (View: 39, DB: 22) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#destroy (for 127.0.0.1 at 2010-12-12 12:58:29) [DELETE]
+  Parameters: {"id"=>"3"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 3) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 3) [0m
+[paperclip] Deleting attachments.
+  [4;36;1mGallery Destroy (137.5ms)[0m   [0;1mDELETE FROM "galleries" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/galleries
+Completed in 603ms (DB: 138) | 302 Found [http://localhost/galleries/3]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-12 12:58:29) [GET]
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+Completed in 9ms (View: 3, DB: 0) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#new (for 127.0.0.1 at 2010-12-12 12:58:30) [GET]
+Rendering template within layouts/application
+Rendering galleries/new
+Rendered galleries/_form (49.7ms)
+Completed in 79ms (View: 73, DB: 0) | 200 OK [http://localhost/galleries/new]
+
+
+Processing GalleriesController#create (for 127.0.0.1 at 2010-12-12 12:58:40) [POST]
+  Parameters: {"commit"=>"Save changes", "gallery"=>{"name"=>"Test", "shoot_date(1i)"=>"2010", "shoot_date(2i)"=>"12", "shoot_date(3i)"=>"12", "user_id"=>"1", "collection"=>""}}
+  [4;36;1mGallery Create (0.3ms)[0m   [0;1mINSERT INTO "galleries" ("name", "collection_file_name", "created_at", "updated_at", "collection_updated_at", "shoot_date", "collection_content_type", "collection_file_size", "user_id") VALUES('Test', NULL, '2010-12-12 17:58:40', '2010-12-12 17:58:40', NULL, '2010-12-12', NULL, NULL, 1)[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/galleries/4
+Completed in 96ms (DB: 0) | 302 Found [http://localhost/galleries]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-12 12:58:40) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 4) [0m
+Completed in 100ms (View: 33, DB: 0) | 200 OK [http://localhost/galleries/4]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-12 12:58:42) [GET]
+  Parameters: {"gallery_id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (15.8ms)
+Completed in 50ms (View: 36, DB: 0) | 200 OK [http://localhost/galleries/4/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-12 12:59:08) [POST]
+  Parameters: {"photo"=>{"name"=>"blah", "image"=>#<File:/tmp/RackMultipart20101212-3345-3envbi-0>}, "commit"=>"Save changes", "gallery_id"=>"4"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+[paperclip] identify -format %wx%h '/tmp/stream20101212-3345-1y2xlzv-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101212-3345-1y2xlzv-0.jpg[0]' -resize "150x150>" '/tmp/stream20101212-3345-1y2xlzv-020101212-3345-j7gsyb-0' 2>/dev/null
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('blah', NULL, '2010-12-12 17:59:08', 'delrosario_001_std.jpg', 24488, '2010-12-12 17:59:08', 'image/jpeg', '2010-12-12 17:59:08', 4)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/system/Test/small/delrosario_001_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/system/Test/original/delrosario_001_std.jpg
+Redirected to http://localhost:3000/galleries/4/photos/10
+Completed in 719ms (DB: 1) | 302 Found [http://localhost/galleries/4/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-12 12:59:09) [GET]
+  Parameters: {"id"=>"10", "gallery_id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 10 AND ("photos".gallery_id = 4)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Completed in 40ms (View: 26, DB: 1) | 200 OK [http://localhost/galleries/4/photos/10]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 12:59:09) [GET]
+  Parameters: {"1292176748"=>nil}
+
+ActionController::RoutingError (No route matches "/images/Test/photos/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 12:59:19) [GET]
+  Parameters: {"1292176748"=>nil}
+
+ActionController::RoutingError (No route matches "/galleries/4/photos/Test/photos/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 12:59:20) [GET]
+  Parameters: {"1292176748"=>nil}
+
+ActionController::RoutingError (No route matches "/images/Test/photos/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 12:59:20) [GET]
+  Parameters: {"1292176748"=>nil}
+
+ActionController::RoutingError (No route matches "/images/Test/photos/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-12 13:00:25) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Completed in 84ms (View: 77, DB: 1) | 200 OK [http://localhost/galleries/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:00:25) [GET]
+  Parameters: {"1292176748"=>nil}
+
+ActionController::RoutingError (No route matches "/images/Test/photos/small/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:00:26) [GET]
+  Parameters: {"1292176748"=>nil}
+
+ActionController::RoutingError (No route matches "/images/Test/photos/small/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:00:30) [GET]
+  Parameters: {"1292176748"=>nil}
+
+ActionController::RoutingError (No route matches "/galleries/Test/photos/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#edit (for 127.0.0.1 at 2010-12-12 13:00:44) [GET]
+  Parameters: {"id"=>"10", "gallery_id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 10 AND ("photos".gallery_id = 4)) [0m
+Rendering template within layouts/application
+Rendering photos/edit
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Rendered photos/_form (10.1ms)
+Completed in 39ms (View: 27, DB: 1) | 200 OK [http://localhost/galleries/4/photos/10/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:00:44) [GET]
+  Parameters: {"1292176748"=>nil}
+
+ActionController::RoutingError (No route matches "/images/Test/photos/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:00:44) [GET]
+  Parameters: {"1292176748"=>nil}
+
+ActionController::RoutingError (No route matches "/images/Test/photos/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:00:53) [GET]
+  Parameters: {"1292176748"=>nil}
+
+ActionController::RoutingError (No route matches "/images/Test/photos/small/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:00:53) [GET]
+  Parameters: {"1292176748"=>nil}
+
+ActionController::RoutingError (No route matches "/images/Test/photos/small/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2010-12-12 13:00:56) [DELETE]
+  Parameters: {"id"=>"10", "gallery_id"=>"4"}
+  [4;36;1mGallery Load (0.4ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 10 AND ("photos".gallery_id = 4)) [0m
+[paperclip] Deleting attachments.
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+[paperclip] deleting /home/joshua/railscamp/moments/system/Test/original/delrosario_001_std.jpg
+[paperclip] deleting /home/joshua/railscamp/moments/system/Test/small/delrosario_001_std.jpg
+  [4;35;1mPhoto Destroy (0.3ms)[0m   [0mDELETE FROM "photos" WHERE "id" = 10[0m
+Redirected to http://localhost:3000/galleries/4
+Completed in 127ms (DB: 1) | 302 Found [http://localhost/galleries/4/photos/10]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-12 13:00:56) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.2ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 4) [0m
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/galleries/4]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-12 13:07:07) [GET]
+  Parameters: {"gallery_id"=>"4"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (4.4ms)
+Completed in 81ms (View: 7, DB: 0) | 200 OK [http://localhost/galleries/4/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-12 13:07:12) [POST]
+  Parameters: {"photo"=>{"name"=>"adf", "image"=>#<File:/tmp/RackMultipart20101212-3345-1hx25mc-0>}, "commit"=>"Save changes", "gallery_id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+[paperclip] identify -format %wx%h '/tmp/stream20101212-3345-1pd19xs-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101212-3345-1pd19xs-0.jpg[0]' -resize "150x150>" '/tmp/stream20101212-3345-1pd19xs-020101212-3345-itncve-0' 2>/dev/null
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;35;1mPhoto Create (0.3ms)[0m   [0mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('adf', NULL, '2010-12-12 18:07:13', 'delrosario_001_std.jpg', 24488, '2010-12-12 18:07:13', 'image/jpeg', '2010-12-12 18:07:12', 4)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/system/Test/small/delrosario_001_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/system/Test/original/delrosario_001_std.jpg
+Redirected to http://localhost:3000/galleries/4/photos/11
+Completed in 297ms (DB: 1) | 302 Found [http://localhost/galleries/4/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-12 13:07:13) [GET]
+  Parameters: {"id"=>"11", "gallery_id"=>"4"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 11 AND ("photos".gallery_id = 4)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Completed in 24ms (View: 10, DB: 1) | 200 OK [http://localhost/galleries/4/photos/11]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:07:13) [GET]
+  Parameters: {"1292177232"=>nil}
+
+ActionController::RoutingError (No route matches "/images/Test/photos/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:07:13) [GET]
+  Parameters: {"1292177232"=>nil}
+
+ActionController::RoutingError (No route matches "/images/Test/photos/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:07:37) [GET]
+  Parameters: {"1292177232"=>nil}
+
+ActionController::RoutingError (No route matches "/galleries/4/photos/Test/photos/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:09:16) [GET]
+  Parameters: {"1292177232"=>nil}
+
+ActionController::RoutingError (No route matches "/galleries/4/photos/Test/photos/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:09:17) [GET]
+  Parameters: {"1292177232"=>nil}
+
+ActionController::RoutingError (No route matches "/images/Test/photos/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:09:17) [GET]
+  Parameters: {"1292177232"=>nil}
+
+ActionController::RoutingError (No route matches "/images/Test/photos/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-12 13:09:19) [GET]
+  Parameters: {"id"=>"11", "gallery_id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 11 AND ("photos".gallery_id = 4)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 21ms (View: 9, DB: 1) | 200 OK [http://localhost/galleries/4/photos/11]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:09:19) [GET]
+  Parameters: {"1292177232"=>nil}
+
+ActionController::RoutingError (No route matches "/images/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:09:19) [GET]
+  Parameters: {"1292177232"=>nil}
+
+ActionController::RoutingError (No route matches "/images/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:09:21) [GET]
+  Parameters: {"1292177232"=>nil}
+
+ActionController::RoutingError (No route matches "/galleries/4/photos/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:09:25) [GET]
+  Parameters: {"1292177232"=>nil}
+
+ActionController::RoutingError (No route matches "/images/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:09:25) [GET]
+  Parameters: {"1292177232"=>nil}
+
+ActionController::RoutingError (No route matches "/images/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2010-12-12 13:09:28) [DELETE]
+  Parameters: {"id"=>"11", "gallery_id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 11 AND ("photos".gallery_id = 4)) [0m
+[paperclip] Deleting attachments.
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+[paperclip] deleting /home/joshua/railscamp/moments/system/Test/original/delrosario_001_std.jpg
+[paperclip] deleting /home/joshua/railscamp/moments/system/Test/small/delrosario_001_std.jpg
+  [4;36;1mPhoto Destroy (0.3ms)[0m   [0;1mDELETE FROM "photos" WHERE "id" = 11[0m
+Redirected to http://localhost:3000/galleries/4
+Completed in 120ms (DB: 1) | 302 Found [http://localhost/galleries/4/photos/11]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-12 13:09:29) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 4) [0m
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/galleries/4]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-12 13:09:30) [GET]
+  Parameters: {"gallery_id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (4.4ms)
+Completed in 21ms (View: 7, DB: 0) | 200 OK [http://localhost/galleries/4/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-12 13:09:35) [POST]
+  Parameters: {"photo"=>{"name"=>"fdg", "image"=>#<File:/tmp/RackMultipart20101212-3345-kgpymb-0>}, "commit"=>"Save changes", "gallery_id"=>"4"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+[paperclip] identify -format %wx%h '/tmp/stream20101212-3345-13o2k16-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101212-3345-13o2k16-0.jpg[0]' -resize "150x150>" '/tmp/stream20101212-3345-13o2k16-020101212-3345-1neidag-0' 2>/dev/null
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('fdg', NULL, '2010-12-12 18:09:36', 'delrosario_001_std.jpg', 24488, '2010-12-12 18:09:36', 'image/jpeg', '2010-12-12 18:09:36', 4)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/system/Test/small/delrosario_001_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/system/Test/original/delrosario_001_std.jpg
+Redirected to http://localhost:3000/galleries/4/photos/12
+Completed in 257ms (DB: 1) | 302 Found [http://localhost/galleries/4/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-12 13:09:36) [GET]
+  Parameters: {"id"=>"12", "gallery_id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 12 AND ("photos".gallery_id = 4)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+Completed in 23ms (View: 9, DB: 1) | 200 OK [http://localhost/galleries/4/photos/12]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:09:36) [GET]
+  Parameters: {"1292177376"=>nil}
+
+ActionController::RoutingError (No route matches "/images/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:10:52) [GET]
+  Parameters: {"1292177376"=>nil}
+
+ActionController::RoutingError (No route matches "/galleries/4/photos/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:10:55) [GET]
+  Parameters: {"1292177376"=>nil}
+
+ActionController::RoutingError (No route matches "/images/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:10:55) [GET]
+  Parameters: {"1292177376"=>nil}
+
+ActionController::RoutingError (No route matches "/images/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-12 13:27:45) [GET]
+  Parameters: {"id"=>"12", "gallery_id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 12 AND ("photos".gallery_id = 4)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Completed in 22ms (View: 9, DB: 1) | 200 OK [http://localhost/galleries/4/photos/12]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:27:45) [GET]
+  Parameters: {"1292177376"=>nil}
+
+ActionController::RoutingError (No route matches "/system/Test/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:27:46) [GET]
+  Parameters: {"1292177376"=>nil}
+
+ActionController::RoutingError (No route matches "/system/Test/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 13:27:48) [GET]
+  Parameters: {"1292177376"=>nil}
+
+ActionController::RoutingError (No route matches "/system/Test/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-12 13:55:15) [GET]
+  Parameters: {"id"=>"12", "gallery_id"=>"4"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 12 AND ("photos".gallery_id = 4)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+
+NameError (undefined local variable or method `x_sendfile' for #<PhotosController:0x7fc51ecec828>):
+  app/controllers/photos_controller.rb:10:in `show'
+
+Rendered rescues/_trace (32.1ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-12 13:55:30) [GET]
+  Parameters: {"id"=>"12", "gallery_id"=>"4"}
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Load (0.5ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 12 AND ("photos".gallery_id = 4)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Sending X-Sendfile header /home/joshua/railscamp/moments/system/Test/original/delrosario_001_std.jpg
+Completed in 19ms (View: 1, DB: 1) | 200 OK [http://localhost/galleries/4/photos/12]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-12 13:55:37) [POST]
+  Parameters: {"photo"=>{"name"=>"fdg", "image"=>#<File:/tmp/RackMultipart20101212-3345-1iyr7ci-0>}, "commit"=>"Save changes", "gallery_id"=>"4"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+[paperclip] identify -format %wx%h '/tmp/stream20101212-3345-8lwyc3-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101212-3345-8lwyc3-0.jpg[0]' -resize "150x150>" '/tmp/stream20101212-3345-8lwyc3-020101212-3345-hnyabj-0' 2>/dev/null
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Create (0.4ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('fdg', NULL, '2010-12-12 18:55:37', 'delrosario_001_std.jpg', 24488, '2010-12-12 18:55:37', 'image/jpeg', '2010-12-12 18:55:37', 4)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/system/Test/small/delrosario_001_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/system/Test/original/delrosario_001_std.jpg
+Redirected to http://localhost:3000/galleries/4/photos/13
+Completed in 298ms (DB: 1) | 302 Found [http://localhost/galleries/4/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-12 13:55:37) [GET]
+  Parameters: {"id"=>"13", "gallery_id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 13 AND ("photos".gallery_id = 4)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Sending X-Sendfile header /home/joshua/railscamp/moments/system/Test/original/delrosario_001_std.jpg
+Completed in 19ms (View: 1, DB: 1) | 200 OK [http://localhost/galleries/4/photos/13]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-12 14:00:25) [POST]
+  Parameters: {"photo"=>{"name"=>"fdg", "image"=>#<File:/tmp/RackMultipart20101212-3345-1gn3gl2-0>}, "commit"=>"Save changes", "gallery_id"=>"4"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+[paperclip] identify -format %wx%h '/tmp/stream20101212-3345-116sp6y-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101212-3345-116sp6y-0.jpg[0]' -resize "150x150>" '/tmp/stream20101212-3345-116sp6y-020101212-3345-6ti9ss-0' 2>/dev/null
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Create (0.4ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('fdg', NULL, '2010-12-12 19:00:25', 'delrosario_001_std.jpg', 24488, '2010-12-12 19:00:25', 'image/jpeg', '2010-12-12 19:00:25', 4)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/system/Test/small/delrosario_001_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/system/Test/original/delrosario_001_std.jpg
+Redirected to http://localhost:3000/galleries/4/photos/14
+Completed in 261ms (DB: 1) | 302 Found [http://localhost/galleries/4/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-12 14:00:25) [GET]
+  Parameters: {"id"=>"14", "gallery_id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 14 AND ("photos".gallery_id = 4)) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+
+NoMethodError (undefined method `get_file' for #<PhotosController:0x7fc51e9db4b8>):
+  app/controllers/photos_controller.rb:10:in `show'
+
+Rendered rescues/_trace (32.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-12 14:00:35) [GET]
+  Parameters: {"id"=>"14", "gallery_id"=>"4"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 14 AND ("photos".gallery_id = 4)) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+
+NoMethodError (undefined method `load_file' for #<PhotosController:0x7fc51eb5fc80>):
+  app/controllers/photos_controller.rb:10:in `show'
+
+Rendered rescues/_trace (32.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-12 14:10:40) [GET]
+  Parameters: {"id"=>"14", "gallery_id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 14 AND ("photos".gallery_id = 4)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Completed in 23ms (View: 10, DB: 1) | 200 OK [http://localhost/galleries/4/photos/14]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 14:10:40) [GET]
+  Parameters: {"1292180425"=>nil}
+
+ActionController::RoutingError (No route matches "/galleries/Test/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 14:10:41) [GET]
+  Parameters: {"1292180425"=>nil}
+
+ActionController::RoutingError (No route matches "/galleries/Test/original/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2010-12-12 14:10:46) [DELETE]
+  Parameters: {"id"=>"14", "gallery_id"=>"4"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 14 AND ("photos".gallery_id = 4)) [0m
+[paperclip] Deleting attachments.
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;35;1mPhoto Destroy (0.3ms)[0m   [0mDELETE FROM "photos" WHERE "id" = 14[0m
+Redirected to http://localhost:3000/galleries/4
+Completed in 100ms (DB: 1) | 302 Found [http://localhost/galleries/4/photos/14]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-12 14:10:46) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.5ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Completed in 102ms (View: 93, DB: 1) | 200 OK [http://localhost/galleries/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 14:10:46) [GET]
+  Parameters: {"1292177376"=>nil}
+
+ActionController::RoutingError (No route matches "/galleries/Test/small/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 14:10:46) [GET]
+  Parameters: {"1292180137"=>nil}
+
+ActionController::RoutingError (No route matches "/galleries/Test/small/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 14:10:46) [GET]
+  Parameters: {"1292177376"=>nil}
+
+ActionController::RoutingError (No route matches "/galleries/Test/small/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2010-12-12 14:10:49) [DELETE]
+  Parameters: {"id"=>"13", "gallery_id"=>"4"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;35;1mPhoto Load (0.3ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos"."id" = 13 AND ("photos".gallery_id = 4)) [0m
+[paperclip] Deleting attachments.
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;35;1mPhoto Destroy (0.3ms)[0m   [0mDELETE FROM "photos" WHERE "id" = 13[0m
+Redirected to http://localhost:3000/galleries/4
+Completed in 108ms (DB: 1) | 302 Found [http://localhost/galleries/4/photos/13]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-12 14:10:49) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;35;1mPhoto Load (0.4ms)[0m   [0mSELECT * FROM "photos" WHERE ("photos".gallery_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Completed in 24ms (View: 16, DB: 1) | 200 OK [http://localhost/galleries/4]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 14:10:49) [GET]
+  Parameters: {"1292177376"=>nil}
+
+ActionController::RoutingError (No route matches "/galleries/Test/small/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-12 14:10:49) [GET]
+  Parameters: {"1292177376"=>nil}
+
+ActionController::RoutingError (No route matches "/galleries/Test/small/delrosario_001_std.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PhotosController#destroy (for 127.0.0.1 at 2010-12-12 14:10:54) [DELETE]
+  Parameters: {"id"=>"12", "gallery_id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 12 AND ("photos".gallery_id = 4)) [0m
+[paperclip] Deleting attachments.
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Destroy (0.3ms)[0m   [0;1mDELETE FROM "photos" WHERE "id" = 12[0m
+Redirected to http://localhost:3000/galleries/4
+Completed in 93ms (DB: 1) | 302 Found [http://localhost/galleries/4/photos/12]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-12 14:10:54) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 4) [0m
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/galleries/4]
+
+
+Processing PhotosController#new (for 127.0.0.1 at 2010-12-12 14:10:56) [GET]
+  Parameters: {"gallery_id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering photos/new
+Rendered photos/_form (6.3ms)
+Completed in 81ms (View: 10, DB: 0) | 200 OK [http://localhost/galleries/4/photos/new]
+
+
+Processing PhotosController#create (for 127.0.0.1 at 2010-12-12 14:11:03) [POST]
+  Parameters: {"photo"=>{"name"=>"asdf;", "image"=>#<File:/tmp/RackMultipart20101212-3345-5aiylt-0>}, "commit"=>"Save changes", "gallery_id"=>"4"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+[paperclip] identify -format %wx%h '/tmp/stream20101212-3345-1icke2t-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101212-3345-1icke2t-0.jpg[0]' -resize "150x150>" '/tmp/stream20101212-3345-1icke2t-020101212-3345-jjbr3r-0' 2>/dev/null
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('asdf;', NULL, '2010-12-12 19:11:04', 'delrosario_001_std.jpg', 24488, '2010-12-12 19:11:04', 'image/jpeg', '2010-12-12 19:11:03', 4)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Test/small/delrosario_001_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Test/original/delrosario_001_std.jpg
+Redirected to http://localhost:3000/galleries/4/photos/15
+Completed in 211ms (DB: 1) | 302 Found [http://localhost/galleries/4/photos]
+
+
+Processing PhotosController#show (for 127.0.0.1 at 2010-12-12 14:11:04) [GET]
+  Parameters: {"id"=>"15", "gallery_id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos"."id" = 15 AND ("photos".gallery_id = 4)) [0m
+Rendering template within layouts/application
+Rendering photos/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Completed in 24ms (View: 10, DB: 1) | 200 OK [http://localhost/galleries/4/photos/15]
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-12 14:11:12) [GET]
+  [4;36;1mGallery Load (0.6ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 4) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 4) LIMIT 1[0m
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 4) [0m
+Completed in 98ms (View: 90, DB: 2) | 200 OK [http://localhost/galleries]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-12 14:11:57) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.4ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 4) [0m
+Completed in 25ms (View: 17, DB: 1) | 200 OK [http://localhost/galleries/4]

@@ -12,5 +12,10 @@
     <%= f.label :shoot_date %><br />
     <%= f.date_select :shoot_date %>
   </p>
+
+  <p>
+    <%= f.label :collection %><br />
+    <%= f.file_field :collection %>
+  </p>
   <p><%= f.submit %></p>
 <% end %>
