@@ -8,5 +8,6 @@ class Photo < ActiveRecord::Base
     :path => ":rails_root/public/galleries/:gallery/:style/:basename.:extension",
     :url => "/galleries/:gallery/:style/:basename.:extension"
   validates_attachment_presence :image
+  validates_attachment_content_type :image, :content_type => 'image/jpeg'
 
 end
