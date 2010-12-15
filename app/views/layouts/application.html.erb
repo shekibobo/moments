@@ -6,7 +6,8 @@
     <%= stylesheet_link_tag 'application' %>
     <%= stylesheet_link_tag 'moments' %>
     <%= stylesheet_link_tag 'image_gallery' %>
-    <%= javascript_include_tag"http://gettopup.com/releases/latest/top_up-min.js" %>
+    <%= stylesheet_link_tag 'lightbox' %>
+    <%= javascript_include_tag :all %>
     <%= yield(:head) %>
   </head>
   <body>

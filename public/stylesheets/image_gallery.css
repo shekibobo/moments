@@ -12,3 +12,9 @@
   text-align: center;
   float: left;
 }
+
+.grid .cell .photo {
+  height: 150px;
+  width: 150px;
+  margin: auto;
+}
