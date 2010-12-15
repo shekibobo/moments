@@ -15,7 +15,11 @@
 
   <p>
     <%= f.label :collection %><br />
-    <%= @gallery.collection.original_filename if @gallery.collection.file? %><br />
+    <% if @gallery.collection.file? %>
+      <%= @gallery.collection.original_filename %>
+      <%= link_to "Build Gallery from File", :action => 'extract', :id => @gallery.id %><br />
+    <% end %>
+
     <%= f.file_field :collection %>
   </p>
   <p><%= f.submit %></p>

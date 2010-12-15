@@ -29,6 +29,8 @@ class Gallery < ActiveRecord::Base
         end
       }
     }
+    # clean up source files, but leave the zip
+    FileUtils.remove_dir(export_path)
   end
 
 end
