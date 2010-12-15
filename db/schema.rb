@@ -9,20 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101215001756) do
-
-  create_table "delayed_jobs", :force => true do |t|
-    t.integer  "priority",   :default => 0
-    t.integer  "attempts",   :default => 0
-    t.text     "handler"
-    t.text     "last_error"
-    t.datetime "run_at"
-    t.datetime "locked_at"
-    t.datetime "failed_at"
-    t.text     "locked_by"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20101205173411) do
 
   create_table "galleries", :force => true do |t|
     t.string   "name"
@@ -30,10 +17,6 @@ ActiveRecord::Schema.define(:version => 20101215001756) do
     t.date     "shoot_date"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "collection_file_name"
-    t.string   "collection_content_type"
-    t.integer  "collection_file_size"
-    t.datetime "collection_updated_at"
   end
 
   create_table "photos", :force => true do |t|

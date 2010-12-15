@@ -2,6 +2,7 @@ class GalleriesController < ApplicationController
   def extract
     @gallery = Gallery.find(params[:id])
     @gallery.extract_photos
+    flash[:notice] = "Processing gallery contents."
     redirect_to @gallery
   end
 

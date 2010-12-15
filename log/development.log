@@ -20075,3 +20075,474 @@ ActionController::UnknownAction (No action responded to images. Actions: create,
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-15 16:43:30) [GET]
+  [4;36;1mGallery Load (0.6ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 18) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 18) LIMIT 1[0m
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 18) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 18) [0m
+Completed in 28ms (View: 19, DB: 1) | 200 OK [http://localhost/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 16:43:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slider.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 16:43:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#new (for 127.0.0.1 at 2010-12-15 16:43:33) [GET]
+Rendering template within layouts/application
+Rendering galleries/new
+Rendered galleries/_form (9.9ms)
+Completed in 24ms (View: 15, DB: 0) | 200 OK [http://localhost/galleries/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 16:43:33) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slider.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 16:43:33) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#images to gif (for 127.0.0.1 at 2010-12-15 16:43:33) [GET]
+  Parameters: {"id"=>"loading"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, extract, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#images to gif (for 127.0.0.1 at 2010-12-15 16:43:33) [GET]
+  Parameters: {"id"=>"closelabel"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, extract, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#create (for 127.0.0.1 at 2010-12-15 16:43:47) [POST]
+  Parameters: {"commit"=>"Save changes", "gallery"=>{"name"=>"test", "shoot_date(1i)"=>"2010", "shoot_date(2i)"=>"12", "shoot_date(3i)"=>"15", "user_id"=>"3", "collection"=>#<File:/tmp/RackMultipart20101215-4503-ggbfxb-0>}}
+  [4;35;1mGallery Create (0.6ms)[0m   [0mINSERT INTO "galleries" ("name", "collection_file_name", "created_at", "updated_at", "collection_updated_at", "shoot_date", "collection_content_type", "collection_file_size", "user_id") VALUES('test', 'delrosario.zip', '2010-12-15 21:43:47', '2010-12-15 21:43:47', '2010-12-15 21:43:47', '2010-12-15', 'application/zip', 590500, 3)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/system/galleries/delrosario.zip
+Redirected to http://localhost:3000/galleries/19/edit
+Completed in 223ms (DB: 1) | 302 Found [http://localhost/galleries]
+
+
+Processing GalleriesController#edit (for 127.0.0.1 at 2010-12-15 16:43:48) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 19) [0m
+Rendering template within layouts/application
+Rendering galleries/edit
+Rendered galleries/_form (10.9ms)
+Completed in 25ms (View: 16, DB: 0) | 200 OK [http://localhost/galleries/19/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 16:43:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slider.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 16:43:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 16:43:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slider.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 16:43:48) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 16:43:48) [GET]
+
+ActionController::RoutingError (No route matches "/galleries/19/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 16:43:48) [GET]
+
+ActionController::RoutingError (No route matches "/galleries/19/images/closelabel.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#extract (for 127.0.0.1 at 2010-12-15 16:43:53) [GET]
+  Parameters: {"id"=>"19"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 19) [0m
+
+NoMethodError (undefined method `send_later' for #<Gallery:0x7fd9ba7146e8>):
+  app/controllers/galleries_controller.rb:4:in `extract'
+
+Rendered rescues/_trace (98.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGalleries (20101205040201)
+Migrating to CreatePhotos (20101205041003)
+Migrating to AddImageToPhotos (20101205173411)
+Migrating to CreateDelayedJobs (20101215001756)
+Migrating to CreateGalleryBuilders (20101215011102)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "gallery_builders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101215011102')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("delayed_jobs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("galleries")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("gallery_builders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("photos")[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGalleryBuilders (20101215011102)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mDROP TABLE "gallery_builders"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20101215011102'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("delayed_jobs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("galleries")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("photos")[0m
+
+
+Processing GalleriesController#update (for 127.0.0.1 at 2010-12-15 16:58:56) [PUT]
+  Parameters: {"commit"=>"Save changes", "id"=>"19", "gallery"=>{"name"=>"test", "shoot_date(1i)"=>"2010", "shoot_date(2i)"=>"12", "shoot_date(3i)"=>"15", "user_id"=>"3"}}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 19) [0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/galleries/19
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/galleries/19]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-15 16:58:56) [GET]
+  Parameters: {"id"=>"19"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 19) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (0.2ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 19) [0m
+Completed in 22ms (View: 12, DB: 1) | 200 OK [http://localhost/galleries/19]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 16:58:56) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slider.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 16:58:56) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#images to gif (for 127.0.0.1 at 2010-12-15 16:58:56) [GET]
+  Parameters: {"id"=>"loading"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, extract, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#images to gif (for 127.0.0.1 at 2010-12-15 16:58:56) [GET]
+  Parameters: {"id"=>"closelabel"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, extract, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#edit (for 127.0.0.1 at 2010-12-15 16:58:59) [GET]
+  Parameters: {"id"=>"19"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 19) [0m
+Rendering template within layouts/application
+Rendering galleries/edit
+Rendered galleries/_form (10.7ms)
+Completed in 25ms (View: 16, DB: 0) | 200 OK [http://localhost/galleries/19/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 16:58:59) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slider.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 16:58:59) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 16:59:00) [GET]
+
+ActionController::RoutingError (No route matches "/galleries/19/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 16:59:00) [GET]
+
+ActionController::RoutingError (No route matches "/galleries/19/images/closelabel.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#extract (for 127.0.0.1 at 2010-12-15 16:59:01) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 19) [0m
+
+NoMethodError (undefined method `send_later' for #<Gallery:0x7fd9ba937560>):
+  app/controllers/galleries_controller.rb:4:in `extract'
+
+Rendered rescues/_trace (31.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GalleriesController#extract (for 127.0.0.1 at 2010-12-15 17:06:25) [GET]
+  Parameters: {"id"=>"19"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 19) [0m
+
+NoMethodError (undefined method `send_later' for #<Gallery:0x7fd9ba620bb0>):
+  app/controllers/galleries_controller.rb:4:in `extract'
+
+Rendered rescues/_trace (99.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GalleriesController#extract (for 127.0.0.1 at 2010-12-15 17:06:28) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 19) [0m
+
+NoMethodError (undefined method `send_later' for #<Gallery:0x7fd9ba92d038>):
+  app/controllers/galleries_controller.rb:4:in `extract'
+
+Rendered rescues/_trace (31.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("delayed_jobs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("galleries")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("photos")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("delayed_jobs")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("galleries")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("photos")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("delayed_jobs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("galleries")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("photos")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (165.9ms)[0m   [0;1mCREATE TABLE "delayed_jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "priority" integer DEFAULT 0, "attempts" integer DEFAULT 0, "handler" text, "last_error" text, "run_at" datetime, "locked_at" datetime, "failed_at" datetime, "locked_by" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (103.4ms)[0m   [0;1mCREATE TABLE "galleries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "user_id" integer, "shoot_date" date, "created_at" datetime, "updated_at" datetime, "collection_file_name" varchar(255), "collection_content_type" varchar(255), "collection_file_size" integer, "collection_updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (128.3ms)[0m   [0;1mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "gallery_id" integer, "name" varchar(255), "rating" decimal, "created_at" datetime, "updated_at" datetime, "image_file_name" varchar(255), "image_content_type" varchar(255), "image_file_size" integer, "image_updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (113.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (119.7ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (110.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20101215001756')[0m
+  [4;36;1mSQL (77.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20101205041003')[0m
+  [4;35;1mSQL (77.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20101205173411')[0m
+  [4;36;1mSQL (88.5ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20101205040201')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (129.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (100.3ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateGalleries (20101205040201)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "galleries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "user_id" integer, "shoot_date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101205040201')[0m
+Migrating to CreatePhotos (20101205041003)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "gallery_id" integer, "name" varchar(255), "rating" decimal, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101205041003')[0m
+Migrating to AddImageToPhotos (20101205173411)
+  [4;35;1mSQL (0.9ms)[0m   [0mALTER TABLE "photos" ADD "image_file_name" varchar(255)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "photos" ADD "image_content_type" varchar(255)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "photos" ADD "image_file_size" integer[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "photos" ADD "image_updated_at" datetime[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101205173411')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("galleries")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("photos")[0m
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-15 17:23:04) [GET]
+  [4;36;1mGallery Load (0.5ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+Completed in 28ms (View: 15, DB: 0) | 200 OK [http://localhost/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:23:04) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slider.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:23:05) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
