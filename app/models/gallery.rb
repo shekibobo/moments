@@ -26,8 +26,6 @@ class Gallery < ActiveRecord::Base
           photo.image = File.open(image_path)
           photo.name = photo.image.original_filename.gsub(/\..*/, '')
           photo.save
-        else
-
         end
       }
     }

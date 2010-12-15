@@ -15,6 +15,7 @@
 
   <p>
     <%= f.label :collection %><br />
+    <%= @gallery.collection.original_filename if @gallery.collection.file? %><br />
     <%= f.file_field :collection %>
   </p>
   <p><%= f.submit %></p>
