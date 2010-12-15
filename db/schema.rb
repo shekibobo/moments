@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101205173411) do
+ActiveRecord::Schema.define(:version => 20101215222520) do
 
   create_table "galleries", :force => true do |t|
     t.string   "name"
@@ -17,6 +17,10 @@ ActiveRecord::Schema.define(:version => 20101205173411) do
     t.date     "shoot_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "collection_file_name"
+    t.string   "collection_content_type"
+    t.integer  "collection_file_size"
+    t.datetime "collection_updated_at"
   end
 
   create_table "photos", :force => true do |t|

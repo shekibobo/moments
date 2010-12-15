@@ -20546,3 +20546,706 @@ ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-15 17:24:27) [GET]
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:24:28) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slider.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:24:28) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-15 17:24:29) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:24:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slider.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:24:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-15 17:24:32) [GET]
+  [4;36;1mGallery Load (0.4ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:24:32) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slider.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:24:32) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#new (for 127.0.0.1 at 2010-12-15 17:24:39) [GET]
+Rendering template within layouts/application
+Rendering galleries/new
+
+ActionView::TemplateError (undefined method `collection_file_name' for #<Gallery:0x7ffeb3376658>) on line #18 of app/views/galleries/_form.html.erb:
+15: 
+16:   <p>
+17:     <%= f.label :collection %><br />
+18:     <% if @gallery.collection.file? %>
+19:       <%= @gallery.collection.original_filename %>
+20:       <%= link_to "Build Gallery from File", :action => 'extract', :id => @gallery.id %><br />
+21:     <% end %>
+
+    paperclip (2.3.5) lib/paperclip/attachment.rb:256:in `send'
+    paperclip (2.3.5) lib/paperclip/attachment.rb:256:in `instance_read'
+    paperclip (2.3.5) lib/paperclip/attachment.rb:172:in `original_filename'
+    paperclip (2.3.5) lib/paperclip/attachment.rb:236:in `file?'
+    app/views/galleries/_form.html.erb:18
+    app/views/galleries/_form.html.erb:1
+    app/views/galleries/new.html.erb:3
+
+Rendered rescues/_trace (123.1ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-12-15 17:25:51) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:25:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slider.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:25:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-15 17:25:52) [GET]
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:25:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slider.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:25:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#new (for 127.0.0.1 at 2010-12-15 17:25:53) [GET]
+Rendering template within layouts/application
+Rendering galleries/new
+
+ActionView::TemplateError (undefined method `collection_file_name' for #<Gallery:0x7ffeb3382020>) on line #18 of app/views/galleries/_form.html.erb:
+15: 
+16:   <p>
+17:     <%= f.label :collection %><br />
+18:     <% if @gallery.collection.file? %>
+19:       <%= @gallery.collection.original_filename %>
+20:       <%= link_to "Build Gallery from File", :action => 'extract', :id => @gallery.id %><br />
+21:     <% end %>
+
+    paperclip (2.3.5) lib/paperclip/attachment.rb:256:in `send'
+    paperclip (2.3.5) lib/paperclip/attachment.rb:256:in `instance_read'
+    paperclip (2.3.5) lib/paperclip/attachment.rb:172:in `original_filename'
+    paperclip (2.3.5) lib/paperclip/attachment.rb:236:in `file?'
+    app/views/galleries/_form.html.erb:18
+    app/views/galleries/_form.html.erb:1
+    app/views/galleries/new.html.erb:3
+
+Rendered rescues/_trace (118.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing GalleriesController#new (for 127.0.0.1 at 2010-12-15 17:26:03) [GET]
+Rendering template within layouts/application
+Rendering galleries/new
+
+ActionView::TemplateError (undefined method `collection_file_name' for #<Gallery:0x7f969bbe7ce0>) on line #18 of app/views/galleries/_form.html.erb:
+15: 
+16:   <p>
+17:     <%= f.label :collection %><br />
+18:     <% if @gallery.collection.file? %>
+19:       <%= @gallery.collection.original_filename %>
+20:       <%= link_to "Build Gallery from File", :action => 'extract', :id => @gallery.id %><br />
+21:     <% end %>
+
+    paperclip (2.3.5) lib/paperclip/attachment.rb:256:in `send'
+    paperclip (2.3.5) lib/paperclip/attachment.rb:256:in `instance_read'
+    paperclip (2.3.5) lib/paperclip/attachment.rb:172:in `original_filename'
+    paperclip (2.3.5) lib/paperclip/attachment.rb:236:in `file?'
+    app/views/galleries/_form.html.erb:18
+    app/views/galleries/_form.html.erb:1
+    app/views/galleries/new.html.erb:3
+
+Rendered rescues/_trace (54.0ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateGalleries (20101205040201)
+Migrating to CreatePhotos (20101205041003)
+Migrating to AddImageToPhotos (20101205173411)
+Migrating to AddAttachmentsCollectionToGallery (20101215222520)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "galleries" ADD "collection_file_name" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "galleries" ADD "collection_content_type" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "galleries" ADD "collection_file_size" integer[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "galleries" ADD "collection_updated_at" datetime[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101215222520')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("galleries")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("photos")[0m
+
+
+Processing GalleriesController#new (for 127.0.0.1 at 2010-12-15 17:26:45) [GET]
+Rendering template within layouts/application
+Rendering galleries/new
+Rendered galleries/_form (12.6ms)
+Completed in 43ms (View: 30, DB: 0) | 200 OK [http://localhost/galleries/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:26:46) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slider.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:26:46) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#images to gif (for 127.0.0.1 at 2010-12-15 17:26:46) [GET]
+  Parameters: {"id"=>"loading"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, extract, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#images to gif (for 127.0.0.1 at 2010-12-15 17:26:46) [GET]
+  Parameters: {"id"=>"closelabel"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, extract, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#create (for 127.0.0.1 at 2010-12-15 17:26:57) [POST]
+  Parameters: {"commit"=>"Save changes", "gallery"=>{"name"=>"Del Rosario", "shoot_date(1i)"=>"2010", "shoot_date(2i)"=>"12", "shoot_date(3i)"=>"15", "user_id"=>"1", "collection"=>#<File:/tmp/RackMultipart20101215-17436-1nspy4f-0>}}
+  [4;36;1mGallery Create (0.4ms)[0m   [0;1mINSERT INTO "galleries" ("name", "collection_file_name", "created_at", "updated_at", "collection_updated_at", "shoot_date", "collection_content_type", "collection_file_size", "user_id") VALUES('Del Rosario', 'delrosario.zip', '2010-12-15 22:26:57', '2010-12-15 22:26:57', '2010-12-15 22:26:57', '2010-12-15', 'application/zip', 590500, 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/system/galleries/delrosario.zip
+Redirected to http://localhost:3000/galleries/1/edit
+Completed in 440ms (DB: 0) | 302 Found [http://localhost/galleries]
+
+
+Processing GalleriesController#edit (for 127.0.0.1 at 2010-12-15 17:26:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/edit
+Rendered galleries/_form (82.6ms)
+Completed in 101ms (View: 91, DB: 0) | 200 OK [http://localhost/galleries/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:26:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slider.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:26:58) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:26:58) [GET]
+
+ActionController::RoutingError (No route matches "/galleries/1/images/loading.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:26:58) [GET]
+
+ActionController::RoutingError (No route matches "/galleries/1/images/closelabel.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#extract (for 127.0.0.1 at 2010-12-15 17:27:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mGallery Load (0.3ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1594rnf-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1594rnf-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-1594rnf-020101215-17436-1yr3so4-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1594rnf-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1594rnf-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-1594rnf-020101215-17436-11klrb1-0' 2>/dev/null
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_019_std', NULL, '2010-12-15 22:27:01', 'delrosario_019_std.jpg', 22238, '2010-12-15 22:27:01', 'image/jpeg', '2010-12-15 22:27:01', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_019_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_019_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-193svhk-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-193svhk-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-193svhk-020101215-17436-1gb0b8n-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-193svhk-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-193svhk-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-193svhk-020101215-17436-dxyvv9-0' 2>/dev/null
+  [4;35;1mGallery Load (0.8ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (1.0ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_012_std', NULL, '2010-12-15 22:27:02', 'delrosario_012_std.jpg', 19743, '2010-12-15 22:27:02', 'image/jpeg', '2010-12-15 22:27:01', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_012_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_012_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-j8v2aa-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-j8v2aa-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-j8v2aa-020101215-17436-brq3g4-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-j8v2aa-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-j8v2aa-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-j8v2aa-020101215-17436-fuko2w-0' 2>/dev/null
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_010_std', NULL, '2010-12-15 22:27:02', 'delrosario_010_std.jpg', 23675, '2010-12-15 22:27:02', 'image/jpeg', '2010-12-15 22:27:02', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_010_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_010_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-rg2jtd-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-rg2jtd-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-rg2jtd-020101215-17436-x2wr4y-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-rg2jtd-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-rg2jtd-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-rg2jtd-020101215-17436-1edqbch-0' 2>/dev/null
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_022_std', NULL, '2010-12-15 22:27:02', 'delrosario_022_std.jpg', 18669, '2010-12-15 22:27:02', 'image/jpeg', '2010-12-15 22:27:02', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_022_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_022_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1d2mpgw-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1d2mpgw-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-1d2mpgw-020101215-17436-zccwy1-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1d2mpgw-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1d2mpgw-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-1d2mpgw-020101215-17436-1lqrbgc-0' 2>/dev/null
+  [4;35;1mGallery Load (1.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_025_std', NULL, '2010-12-15 22:27:02', 'delrosario_025_std.jpg', 23001, '2010-12-15 22:27:02', 'image/jpeg', '2010-12-15 22:27:02', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_025_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_025_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-yne4yi-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-yne4yi-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-yne4yi-020101215-17436-1yeyefa-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-yne4yi-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-yne4yi-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-yne4yi-020101215-17436-11cvtpz-0' 2>/dev/null
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_023_std', NULL, '2010-12-15 22:27:03', 'delrosario_023_std.jpg', 20979, '2010-12-15 22:27:03', 'image/jpeg', '2010-12-15 22:27:03', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_023_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_023_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1gdpb6q-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1gdpb6q-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-1gdpb6q-020101215-17436-fzcs22-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1gdpb6q-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1gdpb6q-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-1gdpb6q-020101215-17436-t2fss0-0' 2>/dev/null
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.2ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_021_std', NULL, '2010-12-15 22:27:03', 'delrosario_021_std.jpg', 20818, '2010-12-15 22:27:03', 'image/jpeg', '2010-12-15 22:27:03', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_021_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_021_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-n1pvwb-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-n1pvwb-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-n1pvwb-020101215-17436-1ozkyin-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-n1pvwb-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-n1pvwb-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-n1pvwb-020101215-17436-1p63jlq-0' 2>/dev/null
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_003_std', NULL, '2010-12-15 22:27:03', 'delrosario_003_std.jpg', 22067, '2010-12-15 22:27:03', 'image/jpeg', '2010-12-15 22:27:03', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_003_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_003_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1nwgxww-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1nwgxww-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-1nwgxww-020101215-17436-14fovhx-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1nwgxww-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1nwgxww-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-1nwgxww-020101215-17436-fp5quf-0' 2>/dev/null
+  [4;35;1mGallery Load (0.9ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.6ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_001_std', NULL, '2010-12-15 22:27:03', 'delrosario_001_std.jpg', 24074, '2010-12-15 22:27:03', 'image/jpeg', '2010-12-15 22:27:03', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_001_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_001_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-g78qt5-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-g78qt5-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-g78qt5-020101215-17436-tpan35-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-g78qt5-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-g78qt5-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-g78qt5-020101215-17436-17bmwuu-0' 2>/dev/null
+  [4;35;1mGallery Load (0.5ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_024_std', NULL, '2010-12-15 22:27:04', 'delrosario_024_std.jpg', 22644, '2010-12-15 22:27:04', 'image/jpeg', '2010-12-15 22:27:04', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_024_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_024_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-12vxxgh-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-12vxxgh-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-12vxxgh-020101215-17436-zqgy9q-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-12vxxgh-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-12vxxgh-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-12vxxgh-020101215-17436-z5486g-0' 2>/dev/null
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_002_std', NULL, '2010-12-15 22:27:04', 'delrosario_002_std.jpg', 18920, '2010-12-15 22:27:04', 'image/jpeg', '2010-12-15 22:27:04', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_002_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_002_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-k5dbt8-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-k5dbt8-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-k5dbt8-020101215-17436-o505ol-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-k5dbt8-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-k5dbt8-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-k5dbt8-020101215-17436-1j03uf1-0' 2>/dev/null
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.2ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_014_std', NULL, '2010-12-15 22:27:04', 'delrosario_014_std.jpg', 35803, '2010-12-15 22:27:04', 'image/jpeg', '2010-12-15 22:27:04', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_014_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_014_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1xdw5gu-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1xdw5gu-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-1xdw5gu-020101215-17436-17pbzsy-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1xdw5gu-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1xdw5gu-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-1xdw5gu-020101215-17436-xrk011-0' 2>/dev/null
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.2ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_017_std', NULL, '2010-12-15 22:27:04', 'delrosario_017_std.jpg', 24377, '2010-12-15 22:27:04', 'image/jpeg', '2010-12-15 22:27:04', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_017_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_017_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1l9zfjg-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1l9zfjg-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-1l9zfjg-020101215-17436-6zjug7-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1l9zfjg-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1l9zfjg-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-1l9zfjg-020101215-17436-1u7aulr-0' 2>/dev/null
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_015_std', NULL, '2010-12-15 22:27:05', 'delrosario_015_std.jpg', 23021, '2010-12-15 22:27:05', 'image/jpeg', '2010-12-15 22:27:05', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_015_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_015_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1ukq6ze-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1ukq6ze-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-1ukq6ze-020101215-17436-8195vo-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1ukq6ze-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1ukq6ze-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-1ukq6ze-020101215-17436-1vxoll-0' 2>/dev/null
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_013_std', NULL, '2010-12-15 22:27:05', 'delrosario_013_std.jpg', 19601, '2010-12-15 22:27:05', 'image/jpeg', '2010-12-15 22:27:05', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_013_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_013_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1joqdx2-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1joqdx2-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-1joqdx2-020101215-17436-1ypynwc-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1joqdx2-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1joqdx2-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-1joqdx2-020101215-17436-1flxuvs-0' 2>/dev/null
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.2ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_016_std', NULL, '2010-12-15 22:27:05', 'delrosario_016_std.jpg', 23967, '2010-12-15 22:27:05', 'image/jpeg', '2010-12-15 22:27:05', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_016_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_016_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-rclgvr-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-rclgvr-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-rclgvr-020101215-17436-130ukl3-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-rclgvr-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-rclgvr-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-rclgvr-020101215-17436-agh3e5-0' 2>/dev/null
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (1.6ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_006_std', NULL, '2010-12-15 22:27:05', 'delrosario_006_std.jpg', 23234, '2010-12-15 22:27:05', 'image/jpeg', '2010-12-15 22:27:05', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_006_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_006_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-8ziut9-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-8ziut9-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-8ziut9-020101215-17436-1n1te32-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-8ziut9-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-8ziut9-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-8ziut9-020101215-17436-yn45rr-0' 2>/dev/null
+  [4;35;1mGallery Load (0.6ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.4ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_004_std', NULL, '2010-12-15 22:27:06', 'delrosario_004_std.jpg', 21556, '2010-12-15 22:27:06', 'image/jpeg', '2010-12-15 22:27:06', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_004_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_004_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-v2vkid-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-v2vkid-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-v2vkid-020101215-17436-1bl7ist-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-v2vkid-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-v2vkid-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-v2vkid-020101215-17436-fzrpal-0' 2>/dev/null
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_020_std', NULL, '2010-12-15 22:27:06', 'delrosario_020_std.jpg', 24007, '2010-12-15 22:27:06', 'image/jpeg', '2010-12-15 22:27:06', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_020_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_020_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-110l939-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-110l939-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-110l939-020101215-17436-vobee4-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-110l939-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-110l939-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-110l939-020101215-17436-14rgy74-0' 2>/dev/null
+  [4;35;1mGallery Load (0.9ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_009_std', NULL, '2010-12-15 22:27:06', 'delrosario_009_std.jpg', 22963, '2010-12-15 22:27:06', 'image/jpeg', '2010-12-15 22:27:06', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_009_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_009_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1sw1ucl-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1sw1ucl-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-1sw1ucl-020101215-17436-1ctdp06-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1sw1ucl-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1sw1ucl-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-1sw1ucl-020101215-17436-kjthfd-0' 2>/dev/null
+  [4;35;1mGallery Load (0.9ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.5ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_007_std', NULL, '2010-12-15 22:27:06', 'delrosario_007_std.jpg', 21245, '2010-12-15 22:27:06', 'image/jpeg', '2010-12-15 22:27:06', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_007_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_007_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1rgytry-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1rgytry-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-1rgytry-020101215-17436-16waphw-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1rgytry-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1rgytry-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-1rgytry-020101215-17436-15s40r7-0' 2>/dev/null
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_005_std', NULL, '2010-12-15 22:27:07', 'delrosario_005_std.jpg', 18912, '2010-12-15 22:27:07', 'image/jpeg', '2010-12-15 22:27:06', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_005_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_005_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-fub37d-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-fub37d-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-fub37d-020101215-17436-1dplkp6-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-fub37d-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-fub37d-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-fub37d-020101215-17436-1eo1ehh-0' 2>/dev/null
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.3ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_008_std', NULL, '2010-12-15 22:27:07', 'delrosario_008_std.jpg', 23542, '2010-12-15 22:27:07', 'image/jpeg', '2010-12-15 22:27:07', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_008_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_008_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-7mcrhm-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-7mcrhm-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-7mcrhm-020101215-17436-n13115-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-7mcrhm-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-7mcrhm-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-7mcrhm-020101215-17436-148yxt8-0' 2>/dev/null
+  [4;35;1mGallery Load (0.8ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.5ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_018_std', NULL, '2010-12-15 22:27:07', 'delrosario_018_std.jpg', 27176, '2010-12-15 22:27:07', 'image/jpeg', '2010-12-15 22:27:07', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_018_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_018_std.jpg
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1onuut7-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1onuut7-0.jpg[0]' -resize "150x150>" '/tmp/stream20101215-17436-1onuut7-020101215-17436-1ttaq04-0' 2>/dev/null
+[paperclip] identify -format %wx%h '/tmp/stream20101215-17436-1onuut7-0.jpg[0]' 2>/dev/null
+[paperclip] convert '/tmp/stream20101215-17436-1onuut7-0.jpg[0]' -resize "500x500>" '/tmp/stream20101215-17436-1onuut7-020101215-17436-1384xpb-0' 2>/dev/null
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mPhoto Create (0.2ms)[0m   [0;1mINSERT INTO "photos" ("name", "rating", "created_at", "image_file_name", "image_file_size", "updated_at", "image_content_type", "image_updated_at", "gallery_id") VALUES('delrosario_011_std', NULL, '2010-12-15 22:27:07', 'delrosario_011_std.jpg', 18847, '2010-12-15 22:27:07', 'image/jpeg', '2010-12-15 22:27:07', 1)[0m
+[paperclip] Saving attachments.
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/small/delrosario_011_std.jpg
+[paperclip] saving /home/joshua/railscamp/moments/public/galleries/Del Rosario/original/delrosario_011_std.jpg
+Redirected to http://localhost:3000/galleries/1
+Completed in 6360ms (DB: 23) | 302 Found [http://localhost/galleries/extract/1]
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-15 17:27:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (2.7ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Completed in 124ms (View: 112, DB: 3) | 200 OK [http://localhost/galleries/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:27:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slider.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:27:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#images to gif (for 127.0.0.1 at 2010-12-15 17:27:08) [GET]
+  Parameters: {"id"=>"loading"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, extract, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#images to gif (for 127.0.0.1 at 2010-12-15 17:27:08) [GET]
+  Parameters: {"id"=>"closelabel"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, extract, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#index (for 127.0.0.1 at 2010-12-15 17:27:50) [GET]
+  [4;36;1mGallery Load (0.5ms)[0m   [0;1mSELECT * FROM "galleries" [0m
+Rendering template within layouts/application
+Rendering galleries/index
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;36;1mPhoto Load (0.3ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) LIMIT 1[0m
+  [4;35;1mGallery Load (0.4ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+Completed in 33ms (View: 23, DB: 1) | 200 OK [http://localhost/galleries]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:27:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slider.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:27:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#show (for 127.0.0.1 at 2010-12-15 17:27:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mGallery Load (0.3ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering galleries/show
+  [4;36;1mPhoto Load (2.6ms)[0m   [0;1mSELECT * FROM "photos" WHERE ("photos".gallery_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "galleries" WHERE ("galleries"."id" = 1) [0m
+Completed in 123ms (View: 112, DB: 3) | 200 OK [http://localhost/galleries/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:27:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/slider.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-12-15 17:27:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/sound.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#images to gif (for 127.0.0.1 at 2010-12-15 17:27:52) [GET]
+  Parameters: {"id"=>"loading"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, extract, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing GalleriesController#images to gif (for 127.0.0.1 at 2010-12-15 17:27:52) [GET]
+  Parameters: {"id"=>"closelabel"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, extract, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
