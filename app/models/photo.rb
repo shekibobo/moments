@@ -1,4 +1,5 @@
 class Photo < ActiveRecord::Base
+  
   attr_accessible :gallery_id, :name, :rating, :image
 
   belongs_to :gallery

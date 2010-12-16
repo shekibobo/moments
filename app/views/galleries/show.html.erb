@@ -1,5 +1,5 @@
 <% title "User #{@gallery.user_id}'s Gallery: #{@gallery.name.capitalize} (#{@gallery.shoot_date})" %>
-
+<%= "#{@gallery.photos.count} photos" %>
 <p><%= link_to "New Photo", new_gallery_photo_path(@gallery) %> |
   <%= link_to "Edit Gallery", edit_gallery_path(@gallery) %> |
   <%= link_to "Destroy Gallery", @gallery,
@@ -9,7 +9,7 @@
 </p>
 
 <div class="grid">
-  <% for photo in @gallery.photos %>
+  <% for photo in @gallery.photos.find( :all, :order => 'rating DESC, name' )%>
   <div class="cell">
     <div class="photo">
       <%= link_to (image_tag photo.image.url(:small)), photo.image.url,
